@@ -1,11 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <title>Test Tailwind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunaris Agile Manifesto</title>
   <link href="output.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-green-500 bg-primary">
-  <h1 class="text-4xl text-primary">If this is green/red, Tailwind works!</h1>
+<body class="min-h-screen bg-bg dark:bg-basedark text-basedark dark:text-bg font-sans" x-data="{ open: false }">
+
+  <!-- Sidebar/Menu (same as before, cut for brevity) -->
+  <!-- ...copy your previous sidebar/menu HTML here... -->
+
+  <main class="pt-24 md:pt-10 px-4 md:px-14 md:ml-64 transition-all max-w-4xl mx-auto">
+    <section class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-black mb-2">Lunaris</h1>
+      <p class="italic text-xl text-accentdark dark:text-accent mb-4">The 1:3 Agile Rhythm for Hybrid Teams</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2">🌕 What is Lunaris?</h2>
+      <p class="mb-4">
+        <strong>Lunaris</strong> is inspired by the lunar cycle—a natural, 4-week rhythm of renewal, growth, and reflection. Just like the moon moves through phases, Lunaris structures work into one in-person week of alignment and connection, followed by three weeks of focused remote execution. It's a cadence designed to balance presence and autonomy, strategy and action. The name reminds us that great teamwork, like nature, works best in cycles—not chaos.
+      </p>
+      <blockquote class="border-l-4 border-accentdark dark:border-accent pl-4 text-accentdark dark:text-accent mb-4 italic">
+        We are uncovering better ways to collaborate, ship great work, and stay connected—without burning out.
+      </blockquote>
+      <p class="mb-4">
+        In a world that's increasingly remote, async, and noisy, we believe teams thrive when they combine human presence with focused, uninterrupted work.
+      </p>
+      <p class="mb-4 font-semibold">Through our experience, we have come to value:</p>
+      <ul class="mb-4 space-y-2 list-disc pl-8">
+        <li><b>In-person alignment</b> over constant video calls</li>
+        <li><b>Deep, focused work</b> over busy-busy multitasking</li>
+        <li><b>Asynchronous clarity</b> over real-time pressure</li>
+        <li><b>Shared rhythm and autonomy</b> over micromanaged sprints</li>
+      </ul>
+      <p class="italic text-sm mb-8">That is, while there's value in the items on the right, we value those on the left more.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2">Principles of Monthly Flow</h2>
+      <ol class="list-decimal pl-8 space-y-3">
+        <li><b>We start together.</b> The first week of every month is our time to meet in person, get aligned, and set the mood. We think big, we plan smart—and we reconnect.</li>
+        <li><b>We protect deep work.</b> The next three weeks are for execution, free from distractions. No micromanagement. Just trust and flow.</li>
+        <li><b>We communicate clearly.</b> We rely on async updates that respect everyone’s time zones and focus. Meetings are intentional, not default.</li>
+        <li><b>We trust the team.</b> Once we set the goals, we let the teams take ownership. It’s not about tracking hours—it’s about delivering value.</li>
+        <li><b>We value our time.</b> Focus time is sacred. We minimize pings, context switching, and aimless syncs.</li>
+        <li><b>We believe in presence.</b> One week together can charge a month of momentum. It’s not just about work—it’s about energy and culture.</li>
+        <li><b>We reflect to grow.</b> Every month ends with a pause. What did we learn? What do we keep? What do we change?</li>
+        <li><b>We’re human first.</b> Behind every avatar is a person. One in-person week gives us back the magic of real team bonding.</li>
+      </ol>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2">How it Works</h2>
+      <div class="mb-4">
+        <b>Week 1 – In-Person Immersion</b><br>
+        Planning, vision alignment, retrospectives, and bonding. Everyone together, no distractions. Big-picture thinking, team energy, and shared purpose.
+      </div>
+      <div>
+        <b>Weeks 2–4 – Remote Deep Work</b><br>
+        Execution time. Teams work autonomously toward monthly goals, with async updates and optional weekly check-ins.
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2">The Hybrid Flow Variant</h2>
+      <p class="mb-2">An optional structure for teams that want a more sustainable pace and natural quarterly rhythm:</p>
+      <div class="mb-4">
+        <b>Hybrid Flow = 3 sprints + 1 reset week</b>
+      </div>
+      <ul class="list-disc pl-8 mb-4">
+        <li><b>Every 3 sprints</b>, teams take a <b>reset week</b> — for cleanup, hackathons, documentation, training, or just breathing room.</li>
+        <li>This creates <b>12 sprints/year</b> (4 quarters × 3 sprints).</li>
+        <li>Reset weeks keep things fresh, reduce burnout, and allow time for bigger-picture reflection.</li>
+      </ul>
+      <div class="bg-accentdark dark:bg-accent rounded-xl text-bg dark:text-basedark p-4 font-mono mb-6 whitespace-pre">
+| Sprint 1 | Sprint 2 | Sprint 3 | Reset Week |
+| Sprint 4 | Sprint 5 | Sprint 6 | Reset Week |
+| Sprint 7 | Sprint 8 | Sprint 9 | Reset Week |
+| Sprint 10| Sprint 11| Sprint 12| Reset Week |
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2">Integrating Design Thinking</h2>
+      <p class="mb-2">Monthly Flow integrates naturally with IBM's Enterprise Design Thinking loop:</p>
+      <ul class="list-disc pl-8 mb-4">
+        <li><b>Observe:</b> Conduct user research and gather insights during the in-person week through workshops, interviews, and empathy mapping.</li>
+        <li><b>Reflect:</b> Use the same week to align around insights, co-define problem statements, and frame "Hills" or shared objectives.</li>
+        <li><b>Make:</b> Execute solutions, iterate on prototypes, and validate ideas throughout the remote weeks.</li>
+      </ul>
+      <p>
+        This hybrid rhythm helps teams empathize, ideate, and deliver—all with the right balance of collaboration and deep focus. The first week becomes a foundation for strategic thinking, while the rest of the month is optimized for execution and iteration.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2">How Lunaris Compares to Other Agile Models</h2>
+      <p class="mb-4">To better understand how Lunaris fits into the Agile ecosystem, here’s how it compares to some of the most common frameworks. We chose these models to represent a range of mindsets: structured (Scrum), fluid (Kanban), strategic (Shape Up), and hybrid (Lunaris).</p>
+      <div class="overflow-x-auto mb-4">
+        <table class="min-w-full text-sm rounded-xl overflow-hidden">
+          <thead>
+            <tr class="bg-accentdark dark:bg-accent text-bg dark:text-basedark">
+              <th class="p-3 text-left font-bold">Model</th>
+              <th class="p-3 text-left font-bold">Core Rhythm</th>
+              <th class="p-3 text-left font-bold">Team Connection</th>
+              <th class="p-3 text-left font-bold">Design Role</th>
+              <th class="p-3 text-left font-bold">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-accentdark dark:border-accent">
+              <td class="p-3 font-bold">Scrum</td>
+              <td class="p-3">2-week sprints</td>
+              <td class="p-3">Daily standups, retros</td>
+              <td class="p-3">Often reactive; design embedded late</td>
+              <td class="p-3">Engineering-led delivery teams</td>
+            </tr>
+            <tr class="border-b border-accentdark dark:border-accent">
+              <td class="p-3 font-bold">Kanban</td>
+              <td class="p-3">Continuous flow</td>
+              <td class="p-3">Minimal structure</td>
+              <td class="p-3">Design works on-demand</td>
+              <td class="p-3">Ops, support, dev-heavy teams</td>
+            </tr>
+            <tr class="border-b border-accentdark dark:border-accent">
+              <td class="p-3 font-bold">Shape Up</td>
+              <td class="p-3">6-week build cycles</td>
+              <td class="p-3">Async-first, trust-based</td>
+              <td class="p-3">Design involved during shaping</td>
+              <td class="p-3">Strategic teams focused on autonomy</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold">Lunaris</td>
+              <td class="p-3">1:3 Monthly Rhythm</td>
+              <td class="p-3">Monthly in-person bonding</td>
+              <td class="p-3">Design leads co-creation in Week 1</td>
+              <td class="p-3">Hybrid or remote teams who value connection & flow</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Lunaris creates a middle ground—structured enough to maintain clarity and direction, but human enough to foster creativity and connection. It’s especially suited for <b>designers, product teams, and distributed teams</b> who want to lead with intention rather than react to endless status updates.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2">Adapting Monthly Flow by Team Type</h2>
+      <div class="mb-3">
+        <b>Product/Program Teams</b><br>
+        Perfect fit. Use the in-person week to break down roadmap items and co-create backlog priorities. Review demos and iterate monthly.
+      </div>
+      <div class="mb-3">
+        <b>Operations Teams</b><br>
+        Adapt by layering Kanban workflows over the month. Use the immersion week for process improvements, training, and alignment.
+      </div>
+      <div class="mb-3">
+        <b>Agencies & Studios</b><br>
+        Use the immersive week for client onboarding, co-creation, and briefing. Then focus the month on delivering creative work with weekly status updates.
+      </div>
+      <div class="mb-3">
+        <b>Healthcare/Compliance Teams</b><br>
+        In-person week includes risk checks, validation, and documentation planning. Use the month to test, analyze, and prepare outputs for audits or trials.
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-2">This is not just a process. It’s a culture.</h2>
+      <p class="mb-4">
+        Monthly Flow is about creating space—for focus, for connection, for purpose. It honors our need to think deeply <i>and</i> work together. It’s made for real life.
+      </p>
+      <div class="text-accentdark dark:text-accent italic">
+        Name still evolving. You might know it as "Lunaris," "Presence & Flow," or simply "The Monthly Rhythm." Whatever you call it, this model puts people at the center of productivity.
+      </div>
+    </section>
+  </main>
 </body>
 </html>
