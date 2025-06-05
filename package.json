@@ -1,0 +1,11 @@
+{
+    "name": "lunaris-tailwind",
+    "version": "1.0.0",
+    "scripts": {
+      "build:css": "tailwindcss -i ./styles.css -o ./output.css --watch"
+    },
+    "devDependencies": {
+      "tailwindcss": "^3.4.3"
+    }
+  }
+  
