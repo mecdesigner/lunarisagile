@@ -26,27 +26,53 @@
     <span class="ml-2 text-xs bg-primary text-white px-2 py-1 rounded-md font-semibold">Manifesto</span>
     <!-- Right: Optional links -->
     <div class="ml-auto flex gap-2">
-      <a href="#"
-        class="hidden md:inline-block px-4 py-2 rounded-lg hover:bg-primary/10 transition text-accentdark dark:text-accent">Contact</a>
-      <a href="#"
-        class="hidden md:inline-block px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition">Sign</a>
+      <!-- Dark Mode Switcher -->
+      <button x-data="{
+      dark: window.matchMedia('(prefers-color-scheme: dark)').matches || localStorage.theme === 'dark',
+      toggle() {
+        this.dark = !this.dark;
+        if (this.dark) {
+          document.documentElement.classList.add('dark');
+          localStorage.theme = 'dark';
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.theme = 'light';
+        }
+      }
+    }" x-init="if(dark) document.documentElement.classList.add('dark')"
+        :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
+        class="ml-2 flex items-center justify-center w-11 h-11 rounded-full border border-accentdark dark:border-accent bg-white dark:bg-basedark shadow transition hover:ring-2 hover:ring-primary focus:outline-none">
+        <!-- Sun (light) icon -->
+        <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" />
+          <path stroke="currentColor" stroke-width="2"
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M17.66 17.66l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M17.66 6.34l1.42-1.42" />
+        </svg>
+        <!-- Moon (dark) icon -->
+        <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke="currentColor" stroke-width="2" d="M21 12.79A9 9 0 0112.21 3a7 7 0 100 14 9 9 0 008.79-4.21z" />
+        </svg>
+      </button>
     </div>
   </header>
 
   <!-- Sidebar for desktop -->
   <aside
     class="hidden md:flex flex-col w-64 fixed top-0 left-0 bottom-0 z-30 bg-white dark:bg-basedark border-r border-accentdark dark:border-accent pt-20 px-6">
-    <nav class="flex flex-col gap-2 mt-2">
+    <nav class="flex flex-col gap-1 mt-2">
+      <div class="px-3 py-2 text-accentdark dark:text-accent text-sm">Manifesto</div>
       <a href="#intro"
         class="px-3 py-2 rounded-lg font-semibold hover:bg-primary/10 transition text-primary">Introduction</a>
-      <a href="#values" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Values</a>
-      <a href="#principles" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Principles</a>
+      <a href="#values" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Our Values</a>
+      <a href="#principles" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">The Principles</a>
       <a href="#how" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">How it Works</a>
-      <a href="#design" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Design Thinking</a>
-      <a href="#teams" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Team Types</a>
+      <a href="#design" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Design Thinking Integration</a>
+      <a href="#teams" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Team Types Adaptation</a>
       <a href="#culture" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Culture</a>
     </nav>
-    <div class="mt-auto mb-6 text-xs text-accentdark dark:text-accent">© 2025 Andy</div>
+    <div class="mt-auto mb-6 text-xs text-accentdark dark:text-accent">©2025 Lunaris TailwindCSS</div>
   </aside>
 
   <!-- Sidebar mobile drawer -->
@@ -65,23 +91,24 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      <nav class="flex flex-col gap-2 mt-4">
+      <nav class="flex flex-col gap-1 mt-4">
+        <div class="px-3 py-2 text-accentdark dark:text-accent text-sm">Manifesto</div>
         <a href="#intro" class="px-3 py-2 rounded-lg font-semibold hover:bg-primary/10 transition text-primary"
           @click="sidebarOpen = false">Introduction</a>
-        <a href="#values" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition"
-          @click="sidebarOpen = false">Values</a>
+        <a href="#values" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition" @click="sidebarOpen = false">Our
+          Values</a>
         <a href="#principles" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition"
-          @click="sidebarOpen = false">Principles</a>
+          @click="sidebarOpen = false">The Principles</a>
         <a href="#how" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition" @click="sidebarOpen = false">How it
           Works</a>
         <a href="#design" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition"
-          @click="sidebarOpen = false">Design Thinking</a>
+          @click="sidebarOpen = false">Design Thinking Integration</a>
         <a href="#teams" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition" @click="sidebarOpen = false">Team
-          Types</a>
+          Types Adaptation</a>
         <a href="#culture" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition"
           @click="sidebarOpen = false">Culture</a>
       </nav>
-      <div class="mt-auto mb-6 text-xs text-accentdark dark:text-accent">© 2025 Andy</div>
+      <div class="mt-auto mb-6 text-xs text-accentdark dark:text-accent">©2025 Lunaris TailwindCSS</div>
     </div>
   </div>
 
@@ -110,8 +137,9 @@
         </form>
       </div>
       <div class="hidden md:block">
-        <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295429_1280.png" alt="Agile illustration"
-          class="rounded-2xl shadow-xl w-full max-w-sm mx-auto" />
+        <img
+          src="https://images.unsplash.com/photo-1507499739999-097706ad8914?q=80&w=2158&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Full Moon during the day" class="rounded-2xl shadow-xl w-full max-w-sm mx-auto" />
       </div>
     </section>
 

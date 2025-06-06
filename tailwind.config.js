@@ -7,8 +7,8 @@ module.exports = {
         primary: '#e63746',     // CTA, highlight
         bg: '#f2faef',          // Main background
         accent: '#a7dadc',      // Accent
-        accentdark: '#447a9c',  // Accent dark
-        basedark: '#1d3658',    // Main dark
+        accentdark: '#B9C1CB',  // Accent dark
+        basedark: '#0C1725',    // Main dark
       },
     },
   },
