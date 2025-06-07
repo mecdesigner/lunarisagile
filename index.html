@@ -15,7 +15,7 @@
 
   <!-- Top Bar -->
   <header
-    class="sticky top-0 z-40 flex items-center bg-neutral-50 dark:bg-misc-dark-background border-b border-neutral-100 dark:border-accent px-4 py-3 md:px-8">
+    class="sticky top-0 z-40 flex items-center bg-neutral-50 dark:bg-misc-dark-background border-b border-neutral-100 dark:border-neutral-50 px-4 py-3 md:px-8">
     <!-- Hamburger for mobile -->
     <button class="md:hidden mr-3" @click="sidebarOpen = true" aria-label="Open navigation">
       <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,85 +41,85 @@
       }
     }" x-init="if(dark) document.documentElement.classList.add('dark')"
         :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
-        class="ml-2 flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-accent bg-white dark:bg-misc-dark-background shadow transition hover:bg-accent hover:text-misc-dark-background focus:outline-none text-sm">
+        class="flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background focus:outline-none text-sm">
         <!-- Sun (light) icon -->
         <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
         <!-- Moon (dark) icon -->
         <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
       </button>
       <a href="#"
-        class="inline-block bg-primary-500 text-white font-bold px-8 py-2 rounded-xl shadow-lg hover:bg-accent hover:text-misc-dark-background transition text-sm"><i
+        class="flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-700 transition text-sm"><i
           class="ti ti-send"></i> Contact</a>
     </div>
   </header>
 
   <!-- Sidebar for desktop -->
   <aside
-    class="hidden md:flex flex-col w-64 fixed top-0 left-0 bottom-0 z-30 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-accent pt-20 px-6">
+    class="hidden md:flex flex-col w-64 fixed top-0 left-0 bottom-0 z-30 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-neutral-50 pt-20 px-6">
     <nav x-data="{ activeSection: 'intro' }" class="flex flex-col gap-1 mt-2">
-      <div class="px-3 py-2 text-neutral-100 dark:text-accent text-sm font-semibold">Manifesto</div>
+      <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Manifesto</div>
       <a href="#intro" :class="[
         activeSection === 'intro'
-          ? 'bg-primary-50 text-primary-500 font-bold'
+          ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
       ]"
         @click.prevent="activeSection = 'intro'; $nextTick(() => document.getElementById('intro').scrollIntoView({ behavior: 'smooth' }))">Introduction</a>
 
       <a href="#values" :class="[
         activeSection === 'values'
-          ? 'bg-primary-50 text-primary-500 font-bold'
+          ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
       ]"
         @click.prevent="activeSection = 'values'; $nextTick(() => document.getElementById('values').scrollIntoView({ behavior: 'smooth' }))">Our
         Values</a>
 
       <a href="#principles" :class="[
         activeSection === 'principles'
-          ? 'bg-primary-50 text-primary-500 font-bold'
+          ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
       ]"
         @click.prevent="activeSection = 'principles'; $nextTick(() => document.getElementById('principles').scrollIntoView({ behavior: 'smooth' }))">The
         Principles</a>
 
       <a href="#how" :class="[
         activeSection === 'how'
-          ? 'bg-primary-50 text-primary-500 font-bold'
+          ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
       ]"
         @click.prevent="activeSection = 'how'; $nextTick(() => document.getElementById('how').scrollIntoView({ behavior: 'smooth' }))">How
         it Works</a>
 
       <a href="#design" :class="[
         activeSection === 'design'
-          ? 'bg-primary-50 text-primary-500 font-bold'
+          ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
       ]"
         @click.prevent="activeSection = 'design'; $nextTick(() => document.getElementById('design').scrollIntoView({ behavior: 'smooth' }))">Design
         Thinking Integration</a>
 
       <a href="#teams" :class="[
         activeSection === 'teams'
-          ? 'bg-primary-50 text-primary-500 font-bold'
+          ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
       ]"
         @click.prevent="activeSection = 'teams'; $nextTick(() => document.getElementById('teams').scrollIntoView({ behavior: 'smooth' }))">Team
         Types Adaptation</a>
 
       <a href="#culture" :class="[
         activeSection === 'culture'
-          ? 'bg-primary-50 text-primary-500 font-bold'
+          ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
       ]"
         @click.prevent="activeSection = 'culture'; $nextTick(() => document.getElementById('culture').scrollIntoView({ behavior: 'smooth' }))">Culture</a>
     </nav>
-    <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-accent">©2025 Lunaris TailwindCSS</div>
+    <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
   </aside>
 
   <!-- Sidebar mobile drawer -->
@@ -131,72 +131,72 @@
     <div class="fixed inset-0 bg-black bg-opacity-40" @click="sidebarOpen = false"></div>
     <!-- Drawer -->
     <div
-      class="relative w-64 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-accent pt-16 px-6 flex flex-col h-full z-50">
-      <button class="absolute top-4 right-4 text-neutral-100 dark:text-accent" @click="sidebarOpen = false"
+      class="relative w-64 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-neutral-50 pt-16 px-6 flex flex-col h-full z-50">
+      <button class="absolute top-4 right-4 text-neutral-100 dark:text-neutral-50" @click="sidebarOpen = false"
         aria-label="Close menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
       <nav x-data="{ activeSection: 'intro' }" class="flex flex-col gap-1 mt-4">
-        <div class="px-3 py-2 text-neutral-100 dark:text-accent text-sm font-semibold">Manifesto</div>
+        <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Manifesto</div>
 
         <a href="#intro" :class="[
       activeSection === 'intro'
-        ? 'bg-primary-50 text-primary-500 font-bold'
+        ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
     ]" @click.prevent="activeSection = 'intro'; sidebarOpen = false; $nextTick(() => document.getElementById('intro').scrollIntoView({ behavior: 'smooth' }))">Introduction</a>
 
         <a href="#values" :class="[
       activeSection === 'values'
-        ? 'bg-primary-50 text-primary-500 font-bold'
+        ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
     ]" @click.prevent="activeSection = 'values'; sidebarOpen = false; $nextTick(() => document.getElementById('values').scrollIntoView({ behavior: 'smooth' }))">Our
           Values</a>
 
         <a href="#principles" :class="[
       activeSection === 'principles'
-        ? 'bg-primary-50 text-primary-500 font-bold'
+        ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
     ]" @click.prevent="activeSection = 'principles'; sidebarOpen = false; $nextTick(() => document.getElementById('principles').scrollIntoView({ behavior: 'smooth' }))">The
           Principles</a>
 
         <a href="#how" :class="[
       activeSection === 'how'
-        ? 'bg-primary-50 text-primary-500 font-bold'
+        ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
     ]" @click.prevent="activeSection = 'how'; sidebarOpen = false; $nextTick(() => document.getElementById('how').scrollIntoView({ behavior: 'smooth' }))">How
           it Works</a>
 
         <a href="#design" :class="[
       activeSection === 'design'
-        ? 'bg-primary-50 text-primary-500 font-bold'
+        ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
     ]" @click.prevent="activeSection = 'design'; sidebarOpen = false; $nextTick(() => document.getElementById('design').scrollIntoView({ behavior: 'smooth' }))">Design
           Thinking Integration</a>
 
         <a href="#teams" :class="[
       activeSection === 'teams'
-        ? 'bg-primary-50 text-primary-500 font-bold'
+        ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
     ]" @click.prevent="activeSection = 'teams'; sidebarOpen = false; $nextTick(() => document.getElementById('teams').scrollIntoView({ behavior: 'smooth' }))">Team
           Types Adaptation</a>
 
         <a href="#culture" :class="[
       activeSection === 'culture'
-        ? 'bg-primary-50 text-primary-500 font-bold'
+        ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-50 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
     ]" @click.prevent="activeSection = 'culture'; sidebarOpen = false; $nextTick(() => document.getElementById('culture').scrollIntoView({ behavior: 'smooth' }))">Culture</a>
       </nav>
 
-      <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-accent">©2025 Lunaris TailwindCSS</div>
+      <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
     </div>
   </div>
 
@@ -208,8 +208,8 @@
     <section class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center" id="intro">
       <div>
         <h1 class="text-4xl md:text-5xl font-black mb-5 leading-tight text-neutral-50">Lunaris Agile Manifesto</h1>
-        <div class="italic text-neutral-100 dark:text-accent text-xl mb-4">The 1:3 Agile Rhythm for Hybrid Teams</div>
-        <p class="mb-6 text-lg text-neutral-100 dark:text-accent">
+        <div class="italic text-neutral-100 dark:text-neutral-50 text-xl mb-4">The 1:3 Agile Rhythm for Hybrid Teams</div>
+        <p class="mb-6 text-lg text-neutral-100 dark:text-neutral-50">
           Lunaris is inspired by the lunar cycle—a natural, 4-week rhythm of renewal, growth, and reflection. Just like
           the moon moves through phases, Lunaris structures work into one in-person week of alignment and connection,
           followed by three weeks of focused remote execution.
@@ -237,19 +237,19 @@
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-lg font-semibold">
         <li class="bg-white dark:bg-neutral-100 p-6 rounded-2xl shadow text-center">
           <i class="ti ti-moon text-primary-500 text-2xl"></i>
-          In-person alignment <br><span class="font-normal text-neutral-100 dark:text-accent">over constant video
+          In-person alignment <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over constant video
             calls</span>
         </li>
         <li class="bg-white dark:bg-neutral-100 p-6 rounded-2xl shadow text-center">
-          Deep, focused work <br><span class="font-normal text-neutral-100 dark:text-accent">over busy-busy
+          Deep, focused work <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over busy-busy
             multitasking</span>
         </li>
         <li class="bg-white dark:bg-neutral-100 p-6 rounded-2xl shadow text-center">
-          Team connection <br><span class="font-normal text-neutral-100 dark:text-accent">over prolonged
+          Team connection <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over prolonged
             isolation</span>
         </li>
         <li class="bg-white dark:bg-neutral-100 p-6 rounded-2xl shadow text-center">
-          Life-work harmony <br><span class="font-normal text-neutral-100 dark:text-accent">over daily office
+          Life-work harmony <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over daily office
             routines</span>
         </li>
       </ul>
@@ -310,7 +310,7 @@
         <li>Reset weeks keep things fresh, reduce burnout, and allow time for bigger-picture reflection</li>
       </ul>
       <pre
-        class="bg-neutral-100 dark:bg-accent text-neutral-50 dark:text-misc-dark-background p-4 rounded-xl font-mono text-center whitespace-pre mb-8">
+        class="bg-neutral-100 dark:bg-neutral-50 text-neutral-50 dark:text-misc-dark-background p-4 rounded-xl font-mono text-center whitespace-pre mb-8">
 | Sprint 1 | Sprint 2 | Sprint 3 | Reset Week |
 | Sprint 4 | Sprint 5 | Sprint 6 | Reset Week |
 | Sprint 7 | Sprint 8 | Sprint 9 | Reset Week |
@@ -364,19 +364,19 @@
           Lunaris is about creating space—for focus, for connection, for purpose.
           It honors our need to think deeply and work together. It’s made for real life.
         </p>
-        <div class="text-neutral-100 dark:text-accent italic text-sm mb-6">
+        <div class="text-neutral-100 dark:text-neutral-50 italic text-sm mb-6">
           Name still evolving. You might know it as "Orbit Agile," "Presence & Flow," or simply "The Monthly Rhythm."
           Whatever you call it, this model puts people at the center of productivity.
         </div>
         <a href="#"
-          class="inline-block bg-primary-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-accent hover:text-misc-dark-background transition text-lg">Contact
+          class="inline-block bg-primary-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-neutral-50 hover:text-misc-dark-background transition text-lg">Contact
           &rarr;</a>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer
-      class="mt-16 border-t border-neutral-100 dark:border-accent py-6 text-center text-sm text-neutral-100 dark:text-accent">
+      class="mt-16 border-t border-neutral-100 dark:border-neutral-50 py-6 text-center text-sm text-neutral-100 dark:text-neutral-50">
       <div class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4">
         <ul class="flex gap-6 mb-3 md:mb-0 justify-center md:justify-start">
           <li><a href="#" class="hover:text-primary-500">Changelog</a></li>
