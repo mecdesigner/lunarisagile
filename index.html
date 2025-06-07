@@ -10,20 +10,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 </head>
 
-<body class="bg-bg dark:bg-basedark text-basedark dark:text-bg font-sans" x-data="{ sidebarOpen: false }">
+<body class="bg-neutral-50 dark:bg-misc-dark-background text-misc-dark-background dark:text-neutral-50 font-sans" x-data="{ sidebarOpen: false }">
 
   <!-- Top Bar -->
-  <header class="sticky top-0 z-40 flex items-center bg-bg dark:bg-basedark shadow px-4 py-3 md:px-8">
+  <header class="sticky top-0 z-40 flex items-center bg-neutral-50 dark:bg-misc-dark-background shadow px-4 py-3 md:px-8">
     <!-- Hamburger for mobile -->
     <button class="md:hidden mr-3" @click="sidebarOpen = true" aria-label="Open navigation">
-      <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
-    <span class="flex items-center gap-2 font-extrabold text-xl tracking-tight">
-      <span class="text-primary">🌙</span> Lunaris
-    </span>
-    <span class="ml-2 text-xs bg-primary text-white px-2 py-1 rounded-md font-semibold">Manifesto</span>
+    <span class="flex items-center gap-2 font-extrabold text-xl tracking-tight">Lunaris Agile</span>
+    <span class="ml-2 text-xs bg-primary-500 text-white px-2 py-1 rounded-xl font-semibold">Manifesto</span>
     <!-- Right: Optional links -->
     <div class="ml-auto flex gap-2">
       <!-- Dark Mode Switcher -->
@@ -41,38 +39,31 @@
       }
     }" x-init="if(dark) document.documentElement.classList.add('dark')"
         :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
-        class="ml-2 flex items-center justify-center w-11 h-11 rounded-full border border-accentdark dark:border-accent bg-white dark:bg-basedark shadow transition hover:ring-2 hover:ring-primary focus:outline-none">
+        class="ml-2 flex items-center justify-center px-8 py-2 rounded-full border border-neutral-100 dark:border-accent bg-white dark:bg-misc-dark-background shadow transition hover:bg-accent hover:text-misc-dark-background focus:outline-none text-sm">
         <!-- Sun (light) icon -->
-        <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" />
-          <path stroke="currentColor" stroke-width="2"
-            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M17.66 17.66l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M17.66 6.34l1.42-1.42" />
-        </svg>
+        <i class="ti ti-sun text-3xl"></i> Light Mode
         <!-- Moon (dark) icon -->
-        <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-accent" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke="currentColor" stroke-width="2" d="M21 12.79A9 9 0 0112.21 3a7 7 0 100 14 9 9 0 008.79-4.21z" />
-        </svg>
+        <i class="ti ti-moon text-3xl"></i> Dark Mode
       </button>
+      <a href="#" class="inline-block bg-primary-500 text-white font-bold px-8 py-2 rounded-xl shadow-lg hover:bg-accent hover:text-misc-dark-background transition text-sm"><i class="ti ti-send"></i> Contact</a>
     </div>
   </header>
 
   <!-- Sidebar for desktop -->
   <aside
-    class="hidden md:flex flex-col w-64 fixed top-0 left-0 bottom-0 z-30 bg-white dark:bg-basedark border-r border-accentdark dark:border-accent pt-20 px-6">
+    class="hidden md:flex flex-col w-64 fixed top-0 left-0 bottom-0 z-30 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-accent pt-20 px-6">
     <nav class="flex flex-col gap-1 mt-2">
-      <div class="px-3 py-2 text-accentdark dark:text-accent text-sm">Manifesto</div>
+      <div class="px-3 py-2 text-neutral-100 dark:text-accent text-sm">Manifesto</div>
       <a href="#intro"
-        class="px-3 py-2 rounded-lg font-semibold hover:bg-primary/10 transition text-primary">Introduction</a>
-      <a href="#values" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Our Values</a>
-      <a href="#principles" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">The Principles</a>
-      <a href="#how" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">How it Works</a>
-      <a href="#design" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Design Thinking Integration</a>
-      <a href="#teams" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Team Types Adaptation</a>
-      <a href="#culture" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition">Culture</a>
+        class="px-3 py-2 rounded-lg font-semibold hover:bg-primary-500/10 transition text-primary-500">Introduction</a>
+      <a href="#values" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition">Our Values</a>
+      <a href="#principles" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition">The Principles</a>
+      <a href="#how" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition">How it Works</a>
+      <a href="#design" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition">Design Thinking Integration</a>
+      <a href="#teams" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition">Team Types Adaptation</a>
+      <a href="#culture" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition">Culture</a>
     </nav>
-    <div class="mt-auto mb-6 text-xs text-accentdark dark:text-accent">©2025 Lunaris TailwindCSS</div>
+    <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-accent">©2025 Lunaris TailwindCSS</div>
   </aside>
 
   <!-- Sidebar mobile drawer -->
@@ -84,44 +75,44 @@
     <div class="fixed inset-0 bg-black bg-opacity-40" @click="sidebarOpen = false"></div>
     <!-- Drawer -->
     <div
-      class="relative w-64 bg-white dark:bg-basedark border-r border-accentdark dark:border-accent pt-16 px-6 flex flex-col h-full z-50">
-      <button class="absolute top-4 right-4 text-accentdark dark:text-accent" @click="sidebarOpen = false"
+      class="relative w-64 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-accent pt-16 px-6 flex flex-col h-full z-50">
+      <button class="absolute top-4 right-4 text-neutral-100 dark:text-accent" @click="sidebarOpen = false"
         aria-label="Close menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
       <nav class="flex flex-col gap-1 mt-4">
-        <div class="px-3 py-2 text-accentdark dark:text-accent text-sm">Manifesto</div>
-        <a href="#intro" class="px-3 py-2 rounded-lg font-semibold hover:bg-primary/10 transition text-primary"
+        <div class="px-3 py-2 text-neutral-100 dark:text-accent text-sm">Manifesto</div>
+        <a href="#intro" class="px-3 py-2 rounded-lg font-semibold hover:bg-primary-500/10 transition text-primary-500"
           @click="sidebarOpen = false">Introduction</a>
-        <a href="#values" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition" @click="sidebarOpen = false">Our
+        <a href="#values" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition" @click="sidebarOpen = false">Our
           Values</a>
-        <a href="#principles" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition"
+        <a href="#principles" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition"
           @click="sidebarOpen = false">The Principles</a>
-        <a href="#how" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition" @click="sidebarOpen = false">How it
+        <a href="#how" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition" @click="sidebarOpen = false">How it
           Works</a>
-        <a href="#design" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition"
+        <a href="#design" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition"
           @click="sidebarOpen = false">Design Thinking Integration</a>
-        <a href="#teams" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition" @click="sidebarOpen = false">Team
+        <a href="#teams" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition" @click="sidebarOpen = false">Team
           Types Adaptation</a>
-        <a href="#culture" class="px-3 py-2 rounded-lg hover:bg-primary/10 transition"
+        <a href="#culture" class="px-3 py-2 rounded-lg hover:bg-primary-500/10 transition"
           @click="sidebarOpen = false">Culture</a>
       </nav>
-      <div class="mt-auto mb-6 text-xs text-accentdark dark:text-accent">©2025 Lunaris TailwindCSS</div>
+      <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-accent">©2025 Lunaris TailwindCSS</div>
     </div>
   </div>
 
   <!-- Main Content -->
-  <main class="md:ml-64 pt-10 pb-16 px-4 max-w-5xl mx-auto">
+  <main class="md:ml-64 pt-10 pb-16 px-4 max-w-7xl mx-auto">
     <!-- Use the IDs to match sidebar links for smooth scroll -->
 
     <!-- HERO -->
     <section class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-black mb-5 leading-tight">Lunaris Agile Manifesto</h1>
-        <div class="italic text-accentdark dark:text-accent text-xl mb-4">The 1:3 Agile Rhythm for Hybrid Teams</div>
-        <p class="mb-6 text-lg text-accentdark dark:text-accent">
+        <h1 class="text-4xl md:text-5xl font-black mb-5 leading-tight text-neutral-50">Lunaris Agile Manifesto</h1>
+        <div class="italic text-neutral-100 dark:text-accent text-xl mb-4">The 1:3 Agile Rhythm for Hybrid Teams</div>
+        <p class="mb-6 text-lg text-neutral-100 dark:text-accent">
           Lunaris is inspired by the lunar cycle—a natural, 4-week rhythm of renewal, growth, and reflection. Just like
           the moon moves through phases, Lunaris structures work into one in-person week of alignment and connection,
           followed by three weeks of focused remote execution.
@@ -129,12 +120,6 @@
           It's a cadence designed to balance presence and autonomy, strategy and action. The name reminds us that great
           teamwork, like nature, works best in cycles—not chaos.
         </p>
-        <form class="flex w-full max-w-md bg-white dark:bg-basedark rounded-xl shadow px-3 py-2 items-center">
-          <input type="text" placeholder="Search topics..."
-            class="flex-1 px-3 py-2 bg-transparent text-basedark dark:text-bg focus:outline-none" />
-          <button type="submit"
-            class="ml-3 px-5 py-2 bg-primary text-white font-bold rounded-lg shadow hover:bg-accent hover:text-basedark transition">Search</button>
-        </form>
       </div>
       <div class="hidden md:block">
         <img
@@ -153,20 +138,20 @@
           presence with focused, uninterrupted work.</p>
       </div>
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-lg font-semibold">
-        <li class="bg-white dark:bg-accentdark p-6 rounded-2xl shadow text-center">
-          <i class="ti ti-moon text-primary text-2xl"></i>
-          In-person alignment <br><span class="font-normal text-accentdark dark:text-accent">over constant video
+        <li class="bg-white dark:bg-neutral-100 p-6 rounded-2xl shadow text-center">
+          <i class="ti ti-moon text-primary-500 text-2xl"></i>
+          In-person alignment <br><span class="font-normal text-neutral-100 dark:text-accent">over constant video
             calls</span>
         </li>
-        <li class="bg-white dark:bg-accentdark p-6 rounded-2xl shadow text-center">
-          Deep, focused work <br><span class="font-normal text-accentdark dark:text-accent">over busy-busy
+        <li class="bg-white dark:bg-neutral-100 p-6 rounded-2xl shadow text-center">
+          Deep, focused work <br><span class="font-normal text-neutral-100 dark:text-accent">over busy-busy
             multitasking</span>
         </li>
-        <li class="bg-white dark:bg-accentdark p-6 rounded-2xl shadow text-center">
-          Team connection <br><span class="font-normal text-accentdark dark:text-accent">over prolonged isolation</span>
+        <li class="bg-white dark:bg-neutral-100 p-6 rounded-2xl shadow text-center">
+          Team connection <br><span class="font-normal text-neutral-100 dark:text-accent">over prolonged isolation</span>
         </li>
-        <li class="bg-white dark:bg-accentdark p-6 rounded-2xl shadow text-center">
-          Life-work harmony <br><span class="font-normal text-accentdark dark:text-accent">over daily office
+        <li class="bg-white dark:bg-neutral-100 p-6 rounded-2xl shadow text-center">
+          Life-work harmony <br><span class="font-normal text-neutral-100 dark:text-accent">over daily office
             routines</span>
         </li>
       </ul>
@@ -227,7 +212,7 @@
         <li>Reset weeks keep things fresh, reduce burnout, and allow time for bigger-picture reflection</li>
       </ul>
       <pre
-        class="bg-accentdark dark:bg-accent text-bg dark:text-basedark p-4 rounded-xl font-mono text-center whitespace-pre mb-8">
+        class="bg-neutral-100 dark:bg-accent text-neutral-50 dark:text-misc-dark-background p-4 rounded-xl font-mono text-center whitespace-pre mb-8">
 | Sprint 1 | Sprint 2 | Sprint 3 | Reset Week |
 | Sprint 4 | Sprint 5 | Sprint 6 | Reset Week |
 | Sprint 7 | Sprint 8 | Sprint 9 | Reset Week |
@@ -281,46 +266,30 @@
           Lunaris is about creating space—for focus, for connection, for purpose.
           It honors our need to think deeply and work together. It’s made for real life.
         </p>
-        <div class="text-accentdark dark:text-accent italic text-sm mb-6">
+        <div class="text-neutral-100 dark:text-accent italic text-sm mb-6">
           Name still evolving. You might know it as "Orbit Agile," "Presence & Flow," or simply "The Monthly Rhythm."
           Whatever you call it, this model puts people at the center of productivity.
         </div>
         <a href="#"
-          class="inline-block bg-primary text-white font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-accent hover:text-basedark transition text-lg">Contact
+          class="inline-block bg-primary-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-accent hover:text-misc-dark-background transition text-lg">Contact
           &rarr;</a>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer
-      class="mt-16 border-t border-accentdark dark:border-accent py-6 text-center text-sm text-accentdark dark:text-accent">
+      class="mt-16 border-t border-neutral-100 dark:border-accent py-6 text-center text-sm text-neutral-100 dark:text-accent">
       <div class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4">
         <ul class="flex gap-6 mb-3 md:mb-0 justify-center md:justify-start">
-          <li><a href="#" class="hover:text-primary">Changelog</a></li>
-          <li><a href="#" class="hover:text-primary">Contact</a></li>
-          <li><a href="#" class="hover:text-primary">Search</a></li>
+          <li><a href="#" class="hover:text-primary-500">Changelog</a></li>
+          <li><a href="#" class="hover:text-primary-500">Contact</a></li>
+          <li><a href="#" class="hover:text-primary-500">Search</a></li>
         </ul>
-        <span class="flex items-center gap-2 font-bold"><span class="text-primary text-lg">🌙</span> Lunaris</span>
+        <span class="flex items-center gap-2 font-bold"><span class="text-primary-500 text-lg">🌙</span> Lunaris</span>
         <ul class="flex gap-4 mt-3 md:mt-0 justify-center md:justify-end">
-          <li><a href="#"><span class="sr-only">Facebook</span> <svg class="w-5 h-5 inline" fill="currentColor"
-                viewBox="0 0 24 24">
-                <path d="M17 2h-3a5 5 0 00-5 5v3H5v4h4v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-              </svg></a></li>
-          <li><a href="#"><span class="sr-only">Twitter</span> <svg class="w-5 h-5 inline" fill="currentColor"
-                viewBox="0 0 24 24">
-                <path
-                  d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9.15 9.15 0 01-2.88 1.1A4.48 4.48 0 0016 2c-2.7 0-4.7 2.45-4.7 5.34v.66A13.09 13.09 0 013 4s-4 9 5 13a13.39 13.39 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-              </svg></a></li>
-          <li><a href="#"><span class="sr-only">Github</span> <svg class="w-5 h-5 inline" fill="currentColor"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 .5a12 12 0 00-3.79 23.4c.6.1.82-.26.82-.57v-2c-3.34.73-4-1.43-4-1.43a3.15 3.15 0 00-1.34-1.76c-1.09-.75.09-.74.09-.74a2.5 2.5 0 011.82 1.23c1.08 1.87 2.84 1.33 3.53 1 .11-.8.42-1.33.76-1.64-2.67-.3-5.47-1.37-5.47-6.07a4.76 4.76 0 011.25-3.31 4.4 4.4 0 01.12-3.27s1-.33 3.29 1.26a11.25 11.25 0 016 0c2.3-1.59 3.29-1.26 3.29-1.26a4.4 4.4 0 01.12 3.27 4.76 4.76 0 011.25 3.31c0 4.7-2.8 5.77-5.47 6.07.44.38.82 1.13.82 2.28v3.38c0 .32.22.68.82.57A12 12 0 0012 .5z" />
-              </svg></a></li>
-          <li><a href="#"><span class="sr-only">LinkedIn</span> <svg class="w-5 h-5 inline" fill="currentColor"
-                viewBox="0 0 24 24">
-                <path
-                  d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-8 19h-3v-8h3zm-1.5-9.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 9.3h-3v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5h-3v-8h3v1.11c.43-.71 1.25-1.11 2-1.11 2.07 0 3.5 1.53 3.5 3.79z" />
-              </svg></a></li>
+          <li><a href="#"><span class="sr-only">Email</span> </a></li>
+          <li><a href="#"><span class="sr-only">Notion</span> </a></li>
+          <li><a href="#"><span class="sr-only">LinkedIn</span> </a></li>
         </ul>
       </div>
       <div class="mt-4">© 2025 Lunaris Model. All rights reserved.</div>
