@@ -62,7 +62,7 @@
         activeSection === 'intro'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
           @click.prevent="activeSection = 'intro'; $nextTick(() => document.getElementById('intro').scrollIntoView({ behavior: 'smooth' }))">Introduction</a>
 
@@ -70,7 +70,7 @@
         activeSection === 'values'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
           @click.prevent="activeSection = 'values'; $nextTick(() => document.getElementById('values').scrollIntoView({ behavior: 'smooth' }))">Our
           Values</a>
@@ -79,7 +79,7 @@
         activeSection === 'principles'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
           @click.prevent="activeSection = 'principles'; $nextTick(() => document.getElementById('principles').scrollIntoView({ behavior: 'smooth' }))">The
           Principles</a>
@@ -88,7 +88,7 @@
         activeSection === 'how'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
           @click.prevent="activeSection = 'how'; $nextTick(() => document.getElementById('how').scrollIntoView({ behavior: 'smooth' }))">How
           it Works</a>
@@ -97,7 +97,7 @@
         activeSection === 'design'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
           @click.prevent="activeSection = 'design'; $nextTick(() => document.getElementById('design').scrollIntoView({ behavior: 'smooth' }))">Design
           Thinking Integration</a>
@@ -106,7 +106,7 @@
         activeSection === 'teams'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
           @click.prevent="activeSection = 'teams'; $nextTick(() => document.getElementById('teams').scrollIntoView({ behavior: 'smooth' }))">Team
           Types Adaptation</a>
@@ -115,7 +115,7 @@
         activeSection === 'culture'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
-        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+        'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
           @click.prevent="activeSection = 'culture'; $nextTick(() => document.getElementById('culture').scrollIntoView({ behavior: 'smooth' }))">Culture</a>
       </nav>
@@ -145,14 +145,14 @@
       activeSection === 'intro'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'intro'; sidebarOpen = false; $nextTick(() => document.getElementById('intro').scrollIntoView({ behavior: 'smooth' }))">Introduction</a>
 
           <a href="#values" :class="[
       activeSection === 'values'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'values'; sidebarOpen = false; $nextTick(() => document.getElementById('values').scrollIntoView({ behavior: 'smooth' }))">Our
             Values</a>
 
@@ -160,7 +160,7 @@
       activeSection === 'principles'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'principles'; sidebarOpen = false; $nextTick(() => document.getElementById('principles').scrollIntoView({ behavior: 'smooth' }))">The
             Principles</a>
 
@@ -168,7 +168,7 @@
       activeSection === 'how'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'how'; sidebarOpen = false; $nextTick(() => document.getElementById('how').scrollIntoView({ behavior: 'smooth' }))">How
             it Works</a>
 
@@ -176,7 +176,7 @@
       activeSection === 'design'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'design'; sidebarOpen = false; $nextTick(() => document.getElementById('design').scrollIntoView({ behavior: 'smooth' }))">Design
             Thinking Integration</a>
 
@@ -184,7 +184,7 @@
       activeSection === 'teams'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'teams'; sidebarOpen = false; $nextTick(() => document.getElementById('teams').scrollIntoView({ behavior: 'smooth' }))">Team
             Types Adaptation</a>
 
@@ -192,7 +192,7 @@
       activeSection === 'culture'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
-      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
+      'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'culture'; sidebarOpen = false; $nextTick(() => document.getElementById('culture').scrollIntoView({ behavior: 'smooth' }))">Culture</a>
         </nav>
 
