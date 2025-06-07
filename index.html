@@ -41,9 +41,9 @@
         :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
         class="ml-2 flex items-center justify-center px-8 py-2 rounded-full border border-neutral-100 dark:border-accent bg-white dark:bg-misc-dark-background shadow transition hover:bg-accent hover:text-misc-dark-background focus:outline-none text-sm">
         <!-- Sun (light) icon -->
-        <i class="ti ti-sun text-3xl"></i> Light Mode
+        <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
         <!-- Moon (dark) icon -->
-        <i class="ti ti-moon text-3xl"></i> Dark Mode
+        <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
       </button>
       <a href="#" class="inline-block bg-primary-500 text-white font-bold px-8 py-2 rounded-xl shadow-lg hover:bg-accent hover:text-misc-dark-background transition text-sm"><i class="ti ti-send"></i> Contact</a>
     </div>
