@@ -687,6 +687,10 @@ video {
   margin-top: auto;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1021,6 +1025,11 @@ video {
   line-height: 1rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -1239,6 +1248,12 @@ html, body {
 .dark\:hover\:text-neutral-500:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(12 23 37 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 640px) {
+  .sm\:invisible {
+    visibility: hidden;
+  }
 }
 
 @media (min-width: 768px) {
