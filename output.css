@@ -1221,6 +1221,11 @@ html, body {
   background-color: rgb(253 235 237 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:hover\:bg-neutral-400:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 38 62 / var(--tw-bg-opacity, 1));
+}
+
 .dark\:hover\:text-neutral-50:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(232 235 238 / var(--tw-text-opacity, 1));

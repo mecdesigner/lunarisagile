@@ -41,162 +41,163 @@
       }
     }" x-init="if(dark) document.documentElement.classList.add('dark')"
         :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
-        class="flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background focus:outline-none text-sm">
+        class="flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
         <!-- Sun (light) icon -->
-        <div x-show="!dark" class="items-center justify-center font-normal"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
+        <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
         <!-- Moon (dark) icon -->
-        <div x-show="dark" class="items-center justify-center font-normal"><i class="ti ti-sun text-sm"></i> Light Mode</div>
+        <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
       </button>
       <a href="#"
         class="flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm"><i
           class="ti ti-send"></i> Contact</a>
     </div>
   </header>
-
-  <!-- Sidebar for desktop -->
-  <aside
-    class="hidden md:flex flex-col w-64 fixed top-0 left-0 bottom-0 z-30 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-neutral-50 pt-20 px-6">
-    <nav x-data="{ activeSection: 'intro' }" class="flex flex-col gap-1 mt-2">
-      <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Manifesto</div>
-      <a href="#intro" :class="[
+  <div x-data="scrollSpy(['intro','values','principles','how','design','teams','culture'])">
+    <!-- Sidebar for desktop -->
+    <aside
+      class="hidden md:flex flex-col w-64 fixed top-0 left-0 bottom-0 z-30 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-neutral-50 pt-20 px-6">
+      <nav x-data="{ activeSection: 'intro' }" class="flex flex-col gap-1 mt-2">
+        <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Manifesto</div>
+        <a href="#intro" :class="[
         activeSection === 'intro'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
         'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-semibold'
       ]"
-        @click.prevent="activeSection = 'intro'; $nextTick(() => document.getElementById('intro').scrollIntoView({ behavior: 'smooth' }))">Introduction</a>
+          @click.prevent="activeSection = 'intro'; $nextTick(() => document.getElementById('intro').scrollIntoView({ behavior: 'smooth' }))">Introduction</a>
 
-      <a href="#values" :class="[
+        <a href="#values" :class="[
         activeSection === 'values'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
         'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
-        @click.prevent="activeSection = 'values'; $nextTick(() => document.getElementById('values').scrollIntoView({ behavior: 'smooth' }))">Our
-        Values</a>
+          @click.prevent="activeSection = 'values'; $nextTick(() => document.getElementById('values').scrollIntoView({ behavior: 'smooth' }))">Our
+          Values</a>
 
-      <a href="#principles" :class="[
+        <a href="#principles" :class="[
         activeSection === 'principles'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
         'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
-        @click.prevent="activeSection = 'principles'; $nextTick(() => document.getElementById('principles').scrollIntoView({ behavior: 'smooth' }))">The
-        Principles</a>
+          @click.prevent="activeSection = 'principles'; $nextTick(() => document.getElementById('principles').scrollIntoView({ behavior: 'smooth' }))">The
+          Principles</a>
 
-      <a href="#how" :class="[
+        <a href="#how" :class="[
         activeSection === 'how'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
         'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
-        @click.prevent="activeSection = 'how'; $nextTick(() => document.getElementById('how').scrollIntoView({ behavior: 'smooth' }))">How
-        it Works</a>
+          @click.prevent="activeSection = 'how'; $nextTick(() => document.getElementById('how').scrollIntoView({ behavior: 'smooth' }))">How
+          it Works</a>
 
-      <a href="#design" :class="[
+        <a href="#design" :class="[
         activeSection === 'design'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
         'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
-        @click.prevent="activeSection = 'design'; $nextTick(() => document.getElementById('design').scrollIntoView({ behavior: 'smooth' }))">Design
-        Thinking Integration</a>
+          @click.prevent="activeSection = 'design'; $nextTick(() => document.getElementById('design').scrollIntoView({ behavior: 'smooth' }))">Design
+          Thinking Integration</a>
 
-      <a href="#teams" :class="[
+        <a href="#teams" :class="[
         activeSection === 'teams'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
         'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
-        @click.prevent="activeSection = 'teams'; $nextTick(() => document.getElementById('teams').scrollIntoView({ behavior: 'smooth' }))">Team
-        Types Adaptation</a>
+          @click.prevent="activeSection = 'teams'; $nextTick(() => document.getElementById('teams').scrollIntoView({ behavior: 'smooth' }))">Team
+          Types Adaptation</a>
 
-      <a href="#culture" :class="[
+        <a href="#culture" :class="[
         activeSection === 'culture'
           ? 'bg-primary-50 text-primary-500 font-normal'
           : 'text-neutral-500 dark:text-neutral-50',
         'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
-        @click.prevent="activeSection = 'culture'; $nextTick(() => document.getElementById('culture').scrollIntoView({ behavior: 'smooth' }))">Culture</a>
-    </nav>
-    <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
-  </aside>
+          @click.prevent="activeSection = 'culture'; $nextTick(() => document.getElementById('culture').scrollIntoView({ behavior: 'smooth' }))">Culture</a>
+      </nav>
+      <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
+    </aside>
 
-  <!-- Sidebar mobile drawer -->
-  <div x-show="sidebarOpen" class="fixed inset-0 z-50 flex" x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="-translate-x-full opacity-0" x-transition:enter-end="translate-x-0 opacity-100"
-    x-transition:leave="transition ease-in duration-200" x-transition:leave-start="translate-x-0 opacity-100"
-    x-transition:leave-end="-translate-x-full opacity-0" style="display: none;">
-    <!-- Overlay -->
-    <div class="fixed inset-0 bg-black bg-opacity-40" @click="sidebarOpen = false"></div>
-    <!-- Drawer -->
-    <div
-      class="relative w-64 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-neutral-50 pt-16 px-6 flex flex-col h-full z-50">
-      <button class="absolute top-4 right-4 text-neutral-100 dark:text-neutral-50" @click="sidebarOpen = false"
-        aria-label="Close menu">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <nav x-data="{ activeSection: 'intro' }" class="flex flex-col gap-1 mt-4">
-        <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Manifesto</div>
+    <!-- Sidebar mobile drawer -->
+    <div x-show="sidebarOpen" class="fixed inset-0 z-50 flex" x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="-translate-x-full opacity-0" x-transition:enter-end="translate-x-0 opacity-100"
+      x-transition:leave="transition ease-in duration-200" x-transition:leave-start="translate-x-0 opacity-100"
+      x-transition:leave-end="-translate-x-full opacity-0" style="display: none;">
+      <!-- Overlay -->
+      <div class="fixed inset-0 bg-black bg-opacity-40" @click="sidebarOpen = false"></div>
+      <!-- Drawer -->
+      <div
+        class="relative w-64 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-neutral-50 pt-16 px-6 flex flex-col h-full z-50">
+        <button class="absolute top-4 right-4 text-neutral-100 dark:text-neutral-50" @click="sidebarOpen = false"
+          aria-label="Close menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <nav x-data="{ activeSection: 'intro' }" class="flex flex-col gap-1 mt-4">
+          <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Manifesto</div>
 
-        <a href="#intro" :class="[
+          <a href="#intro" :class="[
       activeSection === 'intro'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
       'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'intro'; sidebarOpen = false; $nextTick(() => document.getElementById('intro').scrollIntoView({ behavior: 'smooth' }))">Introduction</a>
 
-        <a href="#values" :class="[
+          <a href="#values" :class="[
       activeSection === 'values'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
       'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'values'; sidebarOpen = false; $nextTick(() => document.getElementById('values').scrollIntoView({ behavior: 'smooth' }))">Our
-          Values</a>
+            Values</a>
 
-        <a href="#principles" :class="[
+          <a href="#principles" :class="[
       activeSection === 'principles'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
       'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'principles'; sidebarOpen = false; $nextTick(() => document.getElementById('principles').scrollIntoView({ behavior: 'smooth' }))">The
-          Principles</a>
+            Principles</a>
 
-        <a href="#how" :class="[
+          <a href="#how" :class="[
       activeSection === 'how'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
       'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'how'; sidebarOpen = false; $nextTick(() => document.getElementById('how').scrollIntoView({ behavior: 'smooth' }))">How
-          it Works</a>
+            it Works</a>
 
-        <a href="#design" :class="[
+          <a href="#design" :class="[
       activeSection === 'design'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
       'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'design'; sidebarOpen = false; $nextTick(() => document.getElementById('design').scrollIntoView({ behavior: 'smooth' }))">Design
-          Thinking Integration</a>
+            Thinking Integration</a>
 
-        <a href="#teams" :class="[
+          <a href="#teams" :class="[
       activeSection === 'teams'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
       'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'teams'; sidebarOpen = false; $nextTick(() => document.getElementById('teams').scrollIntoView({ behavior: 'smooth' }))">Team
-          Types Adaptation</a>
+            Types Adaptation</a>
 
-        <a href="#culture" :class="[
+          <a href="#culture" :class="[
       activeSection === 'culture'
         ? 'bg-primary-50 text-primary-500 font-normal'
         : 'text-neutral-500 dark:text-neutral-50',
       'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
     ]" @click.prevent="activeSection = 'culture'; sidebarOpen = false; $nextTick(() => document.getElementById('culture').scrollIntoView({ behavior: 'smooth' }))">Culture</a>
-      </nav>
+        </nav>
 
-      <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
+        <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
+      </div>
     </div>
   </div>
 
@@ -208,7 +209,8 @@
     <section class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center" id="intro">
       <div>
         <h1 class="text-4xl md:text-5xl font-black mb-5 leading-tight text-neutral-50">Lunaris Agile Manifesto</h1>
-        <div class="italic text-neutral-100 dark:text-neutral-50 text-xl mb-4">The 1:3 Agile Rhythm for Hybrid Teams</div>
+        <div class="italic text-neutral-100 dark:text-neutral-50 text-xl mb-4">The 1:3 Agile Rhythm for Hybrid Teams
+        </div>
         <p class="mb-6 text-lg text-neutral-100 dark:text-neutral-50">
           Lunaris is inspired by the lunar cycle—a natural, 4-week rhythm of renewal, growth, and reflection. Just like
           the moon moves through phases, Lunaris structures work into one in-person week of alignment and connection,
@@ -393,6 +395,33 @@
       <div class="mt-4">© 2025 Lunaris Model. All rights reserved.</div>
     </footer>
   </main>
+  <script>
+    function scrollSpy(ids) {
+      return {
+        activeSection: ids[0],
+        init() {
+          const options = {
+            root: null,
+            rootMargin: '0px 0px -60% 0px', // trigger when section is 40% down viewport
+            threshold: 0
+          };
+          const callback = (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                this.activeSection = entry.target.id;
+              }
+            });
+          };
+          this.observer = new IntersectionObserver(callback.bind(this), options);
+          ids.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) this.observer.observe(el);
+          });
+        }
+      }
+    }
+  </script>
+
 </body>
 
 </html>
