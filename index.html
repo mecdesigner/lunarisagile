@@ -282,32 +282,59 @@
           presence with focused, uninterrupted work.</p>
       </div>
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 text-lg font-bold">
-        <li x-data="{ visible: false }"
-        x-intersect:enter="visible = true"
-        :class="visible 
-          ? 'opacity-100 translate-x-0' 
-          : 'opacity-0 -translate-x-12'"
-        class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center">
+        <li
+          x-data="{ visible: false }"
+          x-intersect:enter="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+        >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          <span class="text-primary-500 dark:text-primary-500">In-person alignment</span> <br><span class="font-normal text-neutral-50 dark:text-neutral-50">over constant video
-            calls</span>
+          <span class="text-primary-500 dark:text-primary-500">In-person alignment</span>
+          <br>
+          <span class="font-normal text-neutral-50 dark:text-neutral-50">over constant video calls</span>
         </li>
-        <li class="bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center">
+        <li
+          x-data="{ visible: false }"
+          x-intersect:enter="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+        >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          <span class="text-primary-500 dark:text-primary-500">Deep, focused work</span> <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over busy-busy
-            multitasking</span>
+          <span class="text-primary-500 dark:text-primary-500">Deep, focused work</span>
+          <br>
+          <span class="font-normal text-neutral-50 dark:text-neutral-50">over busy-busy multitasking</span>
         </li>
-        <li class="bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center">
+        <li
+          x-data="{ visible: false }"
+          x-intersect:enter="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+        >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          <span class="text-primary-500 dark:text-primary-500">Team connection</span> <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over prolonged
-            isolation</span>
+          <span class="text-primary-500 dark:text-primary-500">Team connection</span>
+          <br>
+          <span class="font-normal text-neutral-50 dark:text-neutral-50">over prolonged isolation</span>
         </li>
-        <li class="bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center">
+        <li
+          x-data="{ visible: false }"
+          x-intersect:enter="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+        >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          <span class="text-primary-500 dark:text-primary-500">Life-work harmony</span> <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over daily office
-            routines</span>
+          <span class="text-primary-500 dark:text-primary-500">Life-work harmony</span>
+          <br>
+          <span class="font-normal text-neutral-50 dark:text-neutral-50">over daily office routines</span>
         </li>
-      </ul>
+      </ul>      
       <p class="italic text-center text-sm mt-6">That is, while there's value in the items, we value those
         highlighted more.</p>
     </section>
@@ -315,7 +342,7 @@
     <!-- PRINCIPLES -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="principles">
       <h2 class="text-3xl font-bold mb-8">🌗 Principles of Lunaris</h2>
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
         <ul class="space-y-5 bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
           <li><b>We start together.</b> The first week of the month is when we show up—physically, mentally,
             emotionally. We align on vision, build trust, and reconnect as humans, not just roles.</li>
