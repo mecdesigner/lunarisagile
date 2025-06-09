@@ -48,7 +48,7 @@
         <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
       </button>
       <a href="#"
-        class="hidden md:flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm sm:invisible"><i
+        class="hidden md:flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm"><i
           class="ti ti-send"></i> Contact</a>
     </div>
   </header>
@@ -118,6 +118,16 @@
         'hover:bg-primary-50 hover:text-neutral-500 dark:hover:bg-primary-50 dark:hover:text-neutral-500 transition px-3 py-2 rounded-lg font-normal'
       ]"
           @click.prevent="activeSection = 'culture'; $nextTick(() => document.getElementById('culture').scrollIntoView({ behavior: 'smooth' }))">Culture</a>
+
+        <!-- Divider -->
+        <hr class="my-4 border-neutral-200 dark:border-neutral-700" />
+        <!-- Second group -->
+        <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">The Process</div>
+
+        <!-- Divider -->
+        <hr class="my-4 border-neutral-200 dark:border-neutral-700" />
+        <!-- Second group -->
+        <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Hybrid Flow Variant - Reset Week</div>
       </nav>
       <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
     </aside>
@@ -264,22 +274,22 @@
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 text-lg font-bold">
         <li class="bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center">
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          In-person alignment <br><span class="font-normal text-neutral-50 dark:text-neutral-50">over constant video
+          <span class="text-primary-500 dark:text-primary-500">In-person alignment</span> <br><span class="font-normal text-neutral-50 dark:text-neutral-50">over constant video
             calls</span>
         </li>
         <li class="bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center">
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          Deep, focused work <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over busy-busy
+          <span class="text-primary-500 dark:text-primary-500">Deep, focused work</span> <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over busy-busy
             multitasking</span>
         </li>
         <li class="bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center">
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          Team connection <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over prolonged
+          <span class="text-primary-500 dark:text-primary-500">Team connection</span> <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over prolonged
             isolation</span>
         </li>
         <li class="bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center">
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          Life-work harmony <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over daily office
+          <span class="text-primary-500 dark:text-primary-500">Life-work harmony</span> <br><span class="font-normal text-neutral-100 dark:text-neutral-50">over daily office
             routines</span>
         </li>
       </ul>
