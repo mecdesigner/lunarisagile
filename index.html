@@ -7,6 +7,9 @@
   <title>Lunaris Agile Manifesto</title>
   <link href="output.css" rel="stylesheet" />
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.3/dist/tailwind.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 </head>
 
@@ -27,7 +30,7 @@
     <!-- Right: Optional links -->
     <div class="ml-auto flex gap-2">
       <!-- Dark Mode Switcher -->
-      <!--<button x-data="{
+      <button x-data="{
       dark: window.matchMedia('(prefers-color-scheme: dark)').matches || localStorage.theme === 'dark',
       toggle() {
         this.dark = !this.dark;
@@ -42,9 +45,11 @@
     }" x-init="if(dark) document.documentElement.classList.add('dark')"
         :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
         class="hidden md:flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
+        <!-- Sun (light) icon -->
         <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
+        <!-- Moon (dark) icon -->
         <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
-      </button>-->
+      </button>
       <a href="#"
         class="hidden md:flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm"><i
           class="ti ti-send"></i> Contact</a>
@@ -215,7 +220,7 @@
         </nav>
 
         <!-- Dark Mode Switcher -->
-        <!--<button x-data="{
+        <button x-data="{
           dark: window.matchMedia('(prefers-color-scheme: dark)').matches || localStorage.theme === 'dark',
           toggle() {
             this.dark = !this.dark;
@@ -230,9 +235,11 @@
         }" x-init="if(dark) document.documentElement.classList.add('dark')"
             :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
             class="flex flex-col gap-3 items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
+            <!-- Sun (light) icon -->
             <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
+            <!-- Moon (dark) icon -->
             <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
-          </button>-->
+          </button>
           <a href="#"
             class="flex flex-col gap-3 items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm sm:invisible"><i
               class="ti ti-send"></i> Contact</a>
