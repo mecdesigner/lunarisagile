@@ -27,7 +27,7 @@
     <!-- Right: Optional links -->
     <div class="ml-auto flex gap-2">
       <!-- Dark Mode Switcher -->
-      <button x-data="{
+      <!--<button x-data="{
       dark: window.matchMedia('(prefers-color-scheme: dark)').matches || localStorage.theme === 'dark',
       toggle() {
         this.dark = !this.dark;
@@ -42,11 +42,9 @@
     }" x-init="if(dark) document.documentElement.classList.add('dark')"
         :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
         class="hidden md:flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
-        <!-- Sun (light) icon -->
         <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
-        <!-- Moon (dark) icon -->
         <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
-      </button>
+      </button>-->
       <a href="#"
         class="hidden md:flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm"><i
           class="ti ti-send"></i> Contact</a>
@@ -217,7 +215,7 @@
         </nav>
 
         <!-- Dark Mode Switcher -->
-        <button x-data="{
+        <!--<button x-data="{
           dark: window.matchMedia('(prefers-color-scheme: dark)').matches || localStorage.theme === 'dark',
           toggle() {
             this.dark = !this.dark;
@@ -232,11 +230,9 @@
         }" x-init="if(dark) document.documentElement.classList.add('dark')"
             :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
             class="flex flex-col gap-3 items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
-            <!-- Sun (light) icon -->
             <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
-            <!-- Moon (dark) icon -->
             <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
-          </button>
+          </button>-->
           <a href="#"
             class="flex flex-col gap-3 items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm sm:invisible"><i
               class="ti ti-send"></i> Contact</a>
@@ -283,7 +279,7 @@
       </div>
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 text-lg font-bold">
         <li
-          x-data="{ visible: true }"
+          x-data="{ visible: false }"
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
@@ -296,7 +292,7 @@
           <span class="font-normal text-neutral-50 dark:text-neutral-50">over constant video calls</span>
         </li>
         <li
-          x-data="{ visible: true }"
+          x-data="{ visible: false }"
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
@@ -309,7 +305,7 @@
           <span class="font-normal text-neutral-50 dark:text-neutral-50">over busy-busy multitasking</span>
         </li>
         <li
-          x-data="{ visible: true }"
+          x-data="{ visible: false }"
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
@@ -322,7 +318,7 @@
           <span class="font-normal text-neutral-50 dark:text-neutral-50">over prolonged isolation</span>
         </li>
         <li
-          x-data="{ visible: true }"
+          x-data="{ visible: false }"
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
@@ -334,7 +330,7 @@
           <br>
           <span class="font-normal text-neutral-50 dark:text-neutral-50">over daily office routines</span>
         </li>
-      </ul>      
+      </ul>
       <p class="italic text-center text-sm mt-6">That is, while there's value in the items, we value those
         highlighted more.</p>
     </section>
