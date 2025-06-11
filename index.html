@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 </head>
 
-<body class="bg-lunaris-light dark:bg-lunaris-dark text-misc-dark-background dark:text-neutral-50 font-sans"
+<body class="text-misc-dark-background dark:text-neutral-50 font-sans"
   x-data="{ sidebarOpen: false }">
 
   <!-- Top Bar -->
@@ -723,6 +723,23 @@
         }
       }
     }
+    // Place this script after your dark mode toggle logic
+    function updateLunarisBg() {
+      const html = document.documentElement;
+      const body = document.body;
+      body.classList.remove('bg-lunaris-dark', 'bg-lunaris-light');
+      if (html.classList.contains('dark')) {
+        body.classList.add('bg-lunaris-dark');
+      } else {
+        body.classList.add('bg-lunaris-light');
+      }
+    }
+    // Call after toggling dark mode
+    updateLunarisBg();
+
+    // Optionally: run on page load
+    window.addEventListener('DOMContentLoaded', updateLunarisBg);
+    // And also on manual toggle if you use a dark mode button
   </script>
 
 </body>
