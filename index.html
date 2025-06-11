@@ -277,9 +277,9 @@
 
     <!-- VALUES -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="values">
-      <div class="mb-6 text-left">
+      <div class="mb-6 max-w-xl text-left">
         <h2 class="text-3xl font-bold mb-4">🌘 What do we value?</h2>
-        <p class="mb-2">We are uncovering better ways to collaborate, ship great work, and stay connected—without
+        <p class="mb-2 text-lg">We are uncovering better ways to collaborate, ship great work, and stay connected—without
           burning out.<br>
           In a world that's increasingly remote, async, and noisy, we believe teams thrive when they combine human
           presence with focused, uninterrupted work.</p>
@@ -381,7 +381,13 @@
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="principles">
       <h2 class="text-3xl font-bold mb-8">🌑 Principles of Lunaris</h2>
         <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-          <li class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
+          <li 
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
             <!-- Icon: fixed width, vertically centered -->
             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <i class="ti ti-yin-yang text-normal-100 text-neutral-500 dark:text-neutral-500 text-3xl block pb-4"></i>
@@ -396,7 +402,13 @@
               </span>
             </div>
           </li>
-          <li class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
+          <li 
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
             <!-- Icon: fixed width, vertically centered -->
             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <i class="ti ti-yin-yang text-normal-100 text-neutral-500 dark:text-neutral-500 text-3xl block pb-4"></i>
@@ -411,7 +423,13 @@
               </span>
             </div>
           </li>
-          <li class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
+          <li 
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
             <!-- Icon: fixed width, vertically centered -->
             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <i class="ti ti-yin-yang text-normal-100 text-neutral-500 dark:text-neutral-500 text-3xl block pb-4"></i>
@@ -426,7 +444,13 @@
               </span>
             </div>
           </li>
-          <li class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
+          <li 
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
             <!-- Icon: fixed width, vertically centered -->
             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <i class="ti ti-yin-yang text-normal-100 text-neutral-500 dark:text-neutral-500 text-3xl block pb-4"></i>
@@ -441,7 +465,13 @@
               </span>
             </div>
           </li>
-          <li class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
+          <li 
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
             <!-- Icon: fixed width, vertically centered -->
             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <i class="ti ti-yin-yang text-normal-100 text-neutral-500 dark:text-neutral-500 text-3xl block pb-4"></i>
@@ -456,7 +486,13 @@
               </span>
             </div>
           </li>
-          <li class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
+          <li 
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
             <!-- Icon: fixed width, vertically centered -->
             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <i class="ti ti-yin-yang text-normal-100 text-neutral-500 dark:text-neutral-500 text-3xl block pb-4"></i>
@@ -471,7 +507,13 @@
               </span>
             </div>
           </li>
-          <li class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
+          <li 
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
             <!-- Icon: fixed width, vertically centered -->
             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <i class="ti ti-yin-yang text-normal-100 text-neutral-500 dark:text-neutral-500 text-3xl block pb-4"></i>
@@ -486,7 +528,13 @@
               </span>
             </div>
           </li>
-          <li class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
+          <li 
+          x-data="{ visible: false }"
+          x-intersect.once="visible = true"
+          :class="visible 
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
             <!-- Icon: fixed width, vertically centered -->
             <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
               <i class="ti ti-yin-yang text-normal-100 text-neutral-500 dark:text-neutral-500 text-3xl block pb-4"></i>
