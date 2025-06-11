@@ -2,6 +2,25 @@
 module.exports = {
   darkMode: 'class',
   content: ['./*.html'],
+  safelist: [
+    // Opacity
+    'opacity-0',
+    'opacity-100',
+    // Translate X
+    'translate-x-0',
+    'translate-x-12',
+    '-translate-x-12',
+    // Translate Y
+    'translate-y-0',
+    'translate-y-12',
+    '-translate-y-12',
+    // Scale
+    'scale-90',
+    'scale-95',
+    'scale-100',
+    'scale-75',
+    // (add more if you experiment with different effects)
+  ],
   theme: {
     extend: {
       colors: {
