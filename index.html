@@ -283,12 +283,12 @@
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="values">
       <div class="mb-6 max-w-xl text-left">
         <h2 class="text-3xl font-bold mb-4">🌘 What do we value?</h2>
-        <p class="mb-2 text-lg">We are uncovering better ways to collaborate, ship great work, and stay connected—without
+        <p class="mb-8 text-lg">We are uncovering better ways to collaborate, ship great work, and stay connected—without
           burning out.<br>
           In a world that's increasingly remote, async, and noisy, we believe teams thrive when they combine human
           presence with focused, uninterrupted work.</p>
       </div>
-      <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 text-lg font-bold">
+      <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 font-bold p-4">
         <li
           x-data="{ visible: false }"
           x-intersect.once="visible = true"
@@ -377,14 +377,13 @@
           </div>
         </li>
       </ul>
-      <p class="italic text-center text-sm mt-6">That is, while there's value in the items, we value those
-        highlighted more.</p>
+      <p class="italic text-center text-sm mt-6">That is, while there's value in the items, we value those highlighted more.</p>
     </section>
 
     <!-- PRINCIPLES -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="principles">
       <h2 class="text-3xl font-bold mb-8">🌑 Principles of Lunaris</h2>
-        <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+        <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 p-4">
           <li 
           x-data="{ visible: false }"
           x-intersect.once="visible = true"
@@ -559,7 +558,7 @@
     <!-- HOW IT WORKS -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="how">
       <h2 class="text-3xl font-bold mb-8">🌒 How it Works</h2>
-      <div class="flex items-center gap-4 p-6 mb-6">
+      <div class="flex items-center gap-4 p-4 mb-8">
         <div x-data="{ visible: false }"
         x-intersect.once="visible = true"
         :class="visible 
@@ -618,19 +617,18 @@
           <li>Reset weeks keep things fresh, reduce burnout, and allow time for bigger-picture reflection</li>
         </ul>
       </div>
-      <pre
-        class="bg-neutral-100 dark:bg-neutral-50 text-neutral-50 dark:text-misc-dark-background p-4 rounded-xl font-mono text-center whitespace-pre mb-8">
-| Sprint 1 | Sprint 2 | Sprint 3 | Reset Week |
-| Sprint 4 | Sprint 5 | Sprint 6 | Reset Week |
-| Sprint 7 | Sprint 8 | Sprint 9 | Reset Week |
-| Sprint 10| Sprint 11| Sprint 12| Reset Week |
-    </pre>
+      <pre class="bg-neutral-100 dark:bg-neutral-50 text-neutral-50 dark:text-misc-dark-background p-4 rounded-xl font-mono text-center whitespace-pre p-4">
+        | Sprint 1 | Sprint 2 | Sprint 3 | Reset Week |
+        | Sprint 4 | Sprint 5 | Sprint 6 | Reset Week |
+        | Sprint 7 | Sprint 8 | Sprint 9 | Reset Week |
+        | Sprint 10| Sprint 11| Sprint 12| Reset Week |
+      </pre>
     </section>
 
     <!-- DESIGN THINKING -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="design">
       <div class="max-w-xl text-left">
-        <h2 class="text-2xl font-bold mb-2">🌓 Integrating Design Thinking</h2>
+        <h2 class="text-2xl font-bold mb-4">🌓 Integrating Design Thinking</h2>
         <ul class="list-disc pl-8 mb-4 text-lg">
           <li><b>Observe</b> – Use the in-person week for user research, workshops, and empathy mapping</li>
           <li><b>Reflect</b> – Frame the vision, define Hills, and align on problem statements</li>
@@ -644,8 +642,8 @@
 
     <!-- TEAM TYPES -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="teams">
-      <h2 class="text-2xl font-bold mb-2">🌔 Adapting Monthly Flow by Team Type</h2>
-        <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+      <h2 class="text-2xl font-bold mb-8">🌔 Adapting Monthly Flow by Team Type</h2>
+        <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 p-4">
           <li 
           x-data="{ visible: false }"
           x-intersect.once="visible = true"
@@ -696,7 +694,7 @@
     <!-- CULTURE -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="culture">
       <div class="max-w-xl text-left">
-        <h2 class="text-2xl font-bold mb-3">🌕 This is not just a process. It’s a culture.</h2>
+        <h2 class="text-2xl font-bold mb-4">🌕 This is not just a process. It’s a culture.</h2>
         <p class="mb-2 text-lg">
           Lunaris is about creating space—for focus, for connection, for purpose.
           It honors our need to think deeply and work together. It’s made for real life.
