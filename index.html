@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lunaris Agile Manifesto</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
   <link href="output.css" rel="stylesheet" />
   <!-- Alpine Intersect plugin -->
   <script src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js" defer></script>
   <!-- Alpine core -->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 </head>
 
 <body class="bg-neutral-50 dark:bg-misc-dark-background text-misc-dark-background dark:text-neutral-50 font-sans"
@@ -271,7 +271,7 @@
       <div class="hidden md:block">
         <img
           src="https://images.unsplash.com/photo-1507499739999-097706ad8914?q=80&w=2158&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Full Moon during the day" class="rounded-2xl shadow-xl w-full max-w-sm mx-auto" />
+          alt="Full Moon during the day" class="shadow-xl w-full max-w-sm mx-auto" />
       </div>
     </section>
 
@@ -291,7 +291,7 @@
           :class="visible 
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+          class="transition-all duration-900 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
         >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
           <span class="text-primary-500 dark:text-primary-500">In-person alignment</span>
@@ -303,8 +303,8 @@
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
-            : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+            : 'opacity-0 translate-x-24'"
+          class="transition-all duration-900 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
         >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
           <span class="text-primary-500 dark:text-primary-500">Deep, focused work</span>
@@ -316,8 +316,8 @@
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
-            : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+            : 'opacity-0 -translate-x-24'"
+          class="transition-all duration-900 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
         >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
           <span class="text-primary-500 dark:text-primary-500">Team connection</span>
@@ -329,8 +329,8 @@
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
-            : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+            : 'opacity-0 translate-x-12'"
+          class="transition-all duration-900 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
         >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
           <span class="text-primary-500 dark:text-primary-500">Life-work harmony</span>
@@ -345,28 +345,32 @@
     <!-- PRINCIPLES -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="principles">
       <h2 class="text-3xl font-bold mb-8">🌗 Principles of Lunaris</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <ul class="space-y-5 bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
-          <li><b>We start together.</b> The first week of the month is when we show up—physically, mentally,
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          <li class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
+            <b>We start together.</b> The first week of the month is when we show up—physically, mentally,
             emotionally. We align on vision, build trust, and reconnect as humans, not just roles.</li>
-          <li><b>We protect deep work.</b> The following three weeks are for flow. No micromanaging, no constant calls.
+          <li class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
+            <b>We protect deep work.</b> The following three weeks are for flow. No micromanaging, no constant calls.
             Just space to think, create, and build with clarity.</li>
-          <li><b>We communicate clearly.</b> Async comes first. Check-ins are designed, not demanded. Everyone respects
+          <li class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
+            <b>We communicate clearly.</b> Async comes first. Check-ins are designed, not demanded. Everyone respects
             each other's focus time and rhythm. Meetings are intentional, not default.</li>
-          <li><b>We trust the team.</b> Once we set the goals, we let the teams take ownership. It’s not about tracking
+          <li class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
+            <b>We trust the team.</b> Once we set the goals, we let the teams take ownership. It’s not about tracking
             hours—it’s about delivering value.</li>
-        </ul>
-        <ul class="space-y-5 bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
-          <li><b>We value our time.</b> Focus time is sacred. We minimize pings, context switching, and aimless syncs.
+          <li class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
+            <b>We value our time.</b> Focus time is sacred. We minimize pings, context switching, and aimless syncs.
           </li>
-          <li><b>We value spontaneous creativity.</b> Real ideas are often born in hallway chats or over lunch. That’s
+          <li class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
+            <b>We value spontaneous creativity.</b> Real ideas are often born in hallway chats or over lunch. That’s
             why presence matters—it’s not just efficient, it’s inspiring.</li>
-          <li><b>We reflect to grow.</b> At the end of each month, we ask: What worked? What didn’t? What’s next? Growth
+          <li class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
+            <b>We reflect to grow.</b> At the end of each month, we ask: What worked? What didn’t? What’s next? Growth
             needs pause and perspective.</li>
-          <li><b>We’re human first.</b> Lunaris is not a sprint machine. It’s a sustainable loop that respects people
+          <li class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-left">
+            <b>We’re human first.</b> Lunaris is not a sprint machine. It’s a sustainable loop that respects people
             and builds healthier, more connected teams.</li>
         </ul>
-      </div>
     </section>
 
     <!-- HOW IT WORKS -->
