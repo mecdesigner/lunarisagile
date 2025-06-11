@@ -291,19 +291,33 @@
           :class="visible 
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
-        >
-          <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          <span class="text-primary-500 dark:text-primary-500">In-person alignment</span>
-          <br>
-          <span class="font-normal text-neutral-50 dark:text-neutral-50">over constant video calls</span>
+          class="transition-all duration-700 ease-out bg-primary-50 flex items-center gap-4 p-6 rounded-2xl">
+          <!-- Icon: fixed width, vertically centered -->
+          <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+            <!-- Example: info icon from Tabler Icons CDN, or replace with your own -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+              <line x1="12" y1="16" x2="12" y2="12" stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="8" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <!-- Text: headline + subtext, both left-aligned -->
+          <div class="flex-1 min-w-0">
+            <span class="block font-extrabold text-lg bg-primary-200 text-neutral-400 px-1 mb-1 w-max">
+              In-person alignment
+            </span>
+            <span class="block text-neutral-400 text-base font-normal">
+              over constant video calls
+            </span>
+          </div>
         </li>
+
         <li
           x-data="{ visible: false }"
           x-intersect.once="visible = true"
           :class="visible 
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 -translate-y-12'"
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 translate-x-12'"
           class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
         >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
@@ -328,8 +342,8 @@
           x-data="{ visible: false }"
           x-intersect.once="visible = true"
           :class="visible 
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 -translate-y-12'"
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 translate-x-12'"
           class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
         >
           <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
