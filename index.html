@@ -291,34 +291,42 @@
           :class="visible 
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-primary-50 dark:bg-primary-50 flex items-center gap-4 p-6 rounded-2xl">
+          class="transition-all duration-700 ease-out bg-white dark:bg-primary-50 flex items-center gap-4 p-6 rounded-2xl">
           <!-- Icon: fixed width, vertically centered -->
           <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
-            <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
+            <i class="ti ti-moon text-normal-100 text-neutral-500 dark:text-neutral-500 text-5xl block pb-4"></i>
           </div>
           <!-- Text: headline + subtext, both left-aligned -->
           <div class="flex-1 min-w-0">
-            <span class="block font-extrabold text-lg bg-primary-200 dark:bg-primary-200 text-primary-400 dark:text-primary-400 px-1 mb-1 w-max">
+            <span class="block font-extrabold text-lg bg-primary-200 dark:bg-primary-200 text-neutral-400 dark:text-neutral-400 px-1 mb-1 w-max">
               In-person alignment
             </span>
-            <span class="block text-primary-400 dark:text-primary-400 text-base font-normal">
+            <span class="block text-neutral-400 dark:text-neutral-400 text-base font-normal">
               over constant video calls
             </span>
           </div>
         </li>
-
         <li
           x-data="{ visible: false }"
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+          class="transition-all duration-700 ease-out bg-white dark:bg-primary-50 flex items-center gap-4 p-6 rounded-2xl"
         >
-          <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          <span class="text-primary-500 dark:text-primary-500">Deep, focused work</span>
-          <br>
-          <span class="font-normal text-neutral-50 dark:text-neutral-50">over busy-busy multitasking</span>
+          <!-- Icon: fixed width, vertically centered -->
+          <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+            <i class="ti ti-moon text-normal-100 text-neutral-500 dark:text-neutral-500 text-5xl block pb-4"></i>
+          </div>
+          <!-- Text: headline + subtext, both left-aligned -->
+          <div class="flex-1 min-w-0">
+            <span class="block font-extrabold text-lg bg-primary-200 dark:bg-primary-200 text-neutral-400 dark:text-neutral-400 px-1 mb-1 w-max">
+              Deep, focused work</span>
+            </span>
+            <span class="block text-neutral-400 dark:text-neutral-400 text-base font-normal">
+              over busy-busy multitasking
+            </span>
+          </div>
         </li>
         <li
           x-data="{ visible: false }"
@@ -326,12 +334,21 @@
           :class="visible 
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+          class="transition-all duration-700 ease-out bg-white dark:bg-primary-50 flex items-center gap-4 p-6 rounded-2xl"
         >
-          <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          <span class="text-primary-500 dark:text-primary-500">Team connection</span>
-          <br>
-          <span class="font-normal text-neutral-50 dark:text-neutral-50">over prolonged isolation</span>
+          <!-- Icon: fixed width, vertically centered -->
+          <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+            <i class="ti ti-moon text-normal-100 text-neutral-500 dark:text-neutral-500 text-5xl block pb-4"></i>
+          </div>
+          <!-- Text: headline + subtext, both left-aligned -->
+          <div class="flex-1 min-w-0">
+            <span class="block font-extrabold text-lg bg-primary-200 dark:bg-primary-200 text-neutral-400 dark:text-neutral-400 px-1 mb-1 w-max">
+              Team connection</span>
+            </span>
+            <span class="block text-neutral-400 dark:text-neutral-400 text-base font-normal">
+              over prolonged isolation
+            </span>
+          </div>
         </li>
         <li
           x-data="{ visible: false }"
@@ -339,12 +356,21 @@
           :class="visible 
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-neutral-300 text-neutral-50 dark:text-neutral-50 p-6 rounded-2xl text-center"
+          class="transition-all duration-700 ease-out bg-white dark:bg-primary-50 flex items-center gap-4 p-6 rounded-2xl"
         >
-          <i class="ti ti-moon text-normal-100 text-5xl block pb-4"></i>
-          <span class="text-primary-500 dark:text-primary-500">Life-work harmony</span>
-          <br>
-          <span class="font-normal text-neutral-50 dark:text-neutral-50">over daily office routines</span>
+          <!-- Icon: fixed width, vertically centered -->
+          <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+            <i class="ti ti-moon text-normal-100 text-neutral-500 dark:text-neutral-500 text-5xl block pb-4"></i>
+          </div>
+          <!-- Text: headline + subtext, both left-aligned -->
+          <div class="flex-1 min-w-0">
+            <span class="block font-extrabold text-lg bg-primary-200 dark:bg-primary-200 text-neutral-400 dark:text-neutral-400 px-1 mb-1 w-max">
+              Life-work harmony</span>
+            </span>
+            <span class="block text-neutral-400 dark:text-neutral-400 text-base font-normal">
+              over daily office routines
+            </span>
+          </div>
         </li>
       </ul>
       <p class="italic text-center text-sm mt-6">That is, while there's value in the items, we value those
