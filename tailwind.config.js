@@ -94,6 +94,11 @@ module.exports = {
         'misc-disable-fill':      '#f6f6f7',
         'misc-disable-stroke':    '#eaebec',
       },
+      transitionDelay: {
+        '800': '800ms',
+        '1000': '1000ms',
+        // Add more if needed!
+      },
     },
   },
 };
