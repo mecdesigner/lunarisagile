@@ -95,7 +95,7 @@ module.exports = {
         'misc-disable-stroke':    '#eaebec',
       },
       transitionDelay: {
-        '800': '800ms',
+        '500': '500ms',
         '1000': '1000ms',
         // Add more if needed!
       },
