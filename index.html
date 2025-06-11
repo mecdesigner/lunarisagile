@@ -41,9 +41,9 @@
           document.documentElement.classList.remove('dark');
           localStorage.theme = 'light';
         }
+        updateLunarisBg();
       }
-    }" x-init="if(dark) document.documentElement.classList.add('dark') 
-    // Call at init too
+    }" x-init="if(dark) document.documentElement.classList.add('dark'); 
     updateLunarisBg();"
         :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
         class="hidden md:flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
@@ -233,9 +233,9 @@
               document.documentElement.classList.remove('dark');
               localStorage.theme = 'light';
             }
+            updateLunarisBg();
           }
-        }" x-init="if(dark) document.documentElement.classList.add('dark')
-        // Call at init too
+        }" x-init="if(dark) document.documentElement.classList.add('dark');
         updateLunarisBg();"
             :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
             class="flex flex-col gap-3 items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
@@ -654,9 +654,9 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
           class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
-            <h3 class="font-semibold mb-1">Product/Program Teams</h3>
-            <p>Perfect fit. Use the in-person week to break down roadmap items and co-create backlog priorities. Review
-              demos and iterate monthly.</p>
+            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold mb-1">Product/Program Teams</h3>
+            <span class="text-neutral-400 dark:text-neutral-400">Perfect fit. Use the in-person week to break down roadmap items and co-create backlog priorities. Review
+              demos and iterate monthly.</span>
           </li>
           <li 
           x-data="{ visible: false }"
@@ -665,9 +665,9 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
           class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
-            <h3 class="font-semibold mb-1 mt-6">Operations Teams</h3>
-            <p>Adapt by layering Kanban workflows over the month. Use the immersion week for process improvements,
-              training, and alignment.</p>
+            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold mb-1">Operations Teams</h3>
+            <span class="text-neutral-400 dark:text-neutral-400">Adapt by layering Kanban workflows over the month. Use the immersion week for process improvements,
+              training, and alignment.</span>
           </li>
           <li 
           x-data="{ visible: false }"
@@ -676,9 +676,9 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
           class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
-            <h3 class="font-semibold mb-1">Agencies & Studios</h3>
-            <p>Use the immersive week for client onboarding, co-creation, and briefing. Then focus the month on delivering
-              creative work with weekly status updates.</p>
+            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold mb-1">Agencies & Studios</h3>
+            <span class="text-neutral-400 dark:text-neutral-400">Use the immersive week for client onboarding, co-creation, and briefing. Then focus the month on delivering
+              creative work with weekly status updates.</span>
           </li>
           <li 
           x-data="{ visible: false }"
@@ -687,9 +687,9 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
           class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
-            <h3 class="font-semibold mb-1 mt-6">Healthcare/Compliance Teams</h3>
-            <p>In-person week includes risk checks, validation, and documentation planning. Use the month to test,
-              analyze, and prepare outputs for audits or trials.</p>
+            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold mb-1">Healthcare/Compliance Teams</h3>
+            <span class="text-neutral-400 dark:text-neutral-400"></span>In-person week includes risk checks, validation, and documentation planning. Use the month to test,
+              analyze, and prepare outputs for audits or trials.</span>
           </li>
           </ul>
       </div>
