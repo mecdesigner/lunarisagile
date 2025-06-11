@@ -645,16 +645,15 @@
     <!-- TEAM TYPES -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="teams">
       <h2 class="text-2xl font-bold mb-2">🌔 Adapting Monthly Flow by Team Type</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 text-lg">
+        <ul class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
           <li 
           x-data="{ visible: false }"
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
-            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold mb-1">Product/Program Teams</h3>
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 p-6 rounded-2xl">
+            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold text-lg mb-2">Product/Program Teams</h3>
             <span class="text-neutral-400 dark:text-neutral-400">Perfect fit. Use the in-person week to break down roadmap items and co-create backlog priorities. Review
               demos and iterate monthly.</span>
           </li>
@@ -663,9 +662,9 @@
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
-            : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
-            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold mb-1">Operations Teams</h3>
+            : 'opacity-0 translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 p-6 rounded-2xl">
+            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold text-lg mb-2">Operations Teams</h3>
             <span class="text-neutral-400 dark:text-neutral-400">Adapt by layering Kanban workflows over the month. Use the immersion week for process improvements,
               training, and alignment.</span>
           </li>
@@ -675,8 +674,8 @@
           :class="visible 
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
-            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold mb-1">Agencies & Studios</h3>
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 p-6 rounded-2xl">
+            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold text-lg mb-2">Agencies & Studios</h3>
             <span class="text-neutral-400 dark:text-neutral-400">Use the immersive week for client onboarding, co-creation, and briefing. Then focus the month on delivering
               creative work with weekly status updates.</span>
           </li>
@@ -685,14 +684,13 @@
           x-intersect.once="visible = true"
           :class="visible 
             ? 'opacity-100 translate-x-0'
-            : 'opacity-0 -translate-x-12'"
-          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 flex items-center gap-4 p-6 rounded-2xl">
-            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold mb-1">Healthcare/Compliance Teams</h3>
-            <span class="text-neutral-400 dark:text-neutral-400"></span>In-person week includes risk checks, validation, and documentation planning. Use the month to test,
+            : 'opacity-0 translate-x-12'"
+          class="transition-all duration-700 ease-out bg-white dark:bg-success-50 p-6 rounded-2xl">
+            <h3 class="text-neutral-400 dark:text-neutral-400 font-bold text-lg mb-2">Healthcare/Compliance Teams</h3>
+            <span class="text-neutral-400 dark:text-neutral-400">In-person week includes risk checks, validation, and documentation planning. Use the month to test,
               analyze, and prepare outputs for audits or trials.</span>
           </li>
-          </ul>
-      </div>
+        </ul>
     </section>
 
     <!-- CULTURE -->
