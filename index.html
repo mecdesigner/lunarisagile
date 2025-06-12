@@ -220,6 +220,8 @@
           <hr class="my-4 border-neutral-100 dark:border-neutral-50" />
           <!-- Second group -->
           <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Hybrid Flow Variant - Reset Week</div>
+          <!-- Divider -->
+          <hr class="my-4 border-neutral-100 dark:border-neutral-50" />
         </nav>
 
         <!-- Dark Mode Switcher -->
@@ -239,15 +241,16 @@
         }" x-init="if(dark) document.documentElement.classList.add('dark');
         updateLunarisBg();"
             :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
-            class="flex flex-col gap-3 items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
+            class="flex flex-col gap-3 items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal mb-4">
             <!-- Sun (light) icon -->
             <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> <span class="ml-2">Dark Mode</span></div>
             <!-- Moon (dark) icon -->
             <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> <span class="ml-2">Light Mode</span></div>
           </button>
           <a href="#"
-            class="flex flex-col gap-3 items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm"><i
-              class="ti ti-send"></i> <span class="ml-2">Contact</span></a>
+            class="flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm"><i
+              class="ti ti-send"></i> <span class="ml-2">Contact</span>
+          </a>
 
         <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
       </div>
@@ -700,16 +703,16 @@
           Lunaris is about creating space—for focus, for connection, for purpose.
           It honors our need to think deeply and work together. It’s made for real life.
         </p>
-        <div class="text-neutral-100 dark:text-neutral-50 italic text-sm mb-6">
+        <div class="text-neutral-100 dark:text-neutral-50 italic text-sm mb-8">
           Name still evolving. You might know it as "Orbit Agile," "Presence & Flow," or simply "The Monthly Rhythm."
           Whatever you call it, this model puts people at the center of productivity.
         </div>
         <a href="https://www.notion.so/YOUR-PAGE-ID" target="_blank" rel="noopener" 
-          class="md:flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-semibold">
+          class="flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-semibold mb-8">
           <i class="ti ti-file-type-doc text-white"></i> <span class="ml-2">Suggest a Change on Google Docs</span>
         </a>
         <a href="https://forms.gle/YOUR-GOOGLE-FORM" target="_blank" rel="noopener"
-          class="md:flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm">
+          class="flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm">
           <i class="ti ti-writing-sign text-white"></i> <span class="ml-2">Sign the Manifesto</span>
         </a>
       </div>
