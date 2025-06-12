@@ -48,13 +48,13 @@
         :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'" @click="toggle"
         class="hidden md:flex items-center justify-center px-8 py-2 rounded-xl border border-neutral-100 dark:border-neutral-50 bg-white dark:bg-misc-dark-background transition hover:bg-neutral-50 hover:text-misc-dark-background dark:hover:bg-neutral-400 dark:hover:text-neutral-50 focus:outline-none text-sm font-normal">
         <!-- Sun (light) icon -->
-        <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> Dark Mode</div>
+        <div x-show="!dark" class="items-center justify-center"><i class="ti ti-moon text-sm"></i> <span class="ml-2">Dark Mode</span></div>
         <!-- Moon (dark) icon -->
-        <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
+        <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> <span class="ml-2">Light Mode</span></div>
       </button>
       <a href="#"
         class="hidden md:flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm">
-        <i class="ti ti-send"></i> Contact
+        <i class="ti ti-send"></i> <span class="ml-2">Contact</span>
       </a>
     </div>
   </header>
@@ -147,7 +147,7 @@
       <div class="fixed inset-0 bg-black bg-opacity-40" @click="sidebarOpen = false"></div>
       <!-- Drawer -->
       <div
-        class="relative w-64 bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-neutral-50 pt-16 px-6 flex flex-col h-full z-50">
+        class="relative max-w-7xl bg-white dark:bg-misc-dark-background border-r border-neutral-100 dark:border-neutral-50 pt-16 px-6 flex flex-col h-full z-50">
         <button class="absolute top-4 right-4 text-neutral-100 dark:text-neutral-50" @click="sidebarOpen = false"
           aria-label="Close menu">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -246,7 +246,7 @@
             <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> <span class="ml-2">Light Mode</span></div>
           </button>
           <a href="#"
-            class="flex flex-col gap-3 items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm sm:invisible"><i
+            class="flex flex-col gap-3 items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm"><i
               class="ti ti-send"></i> <span class="ml-2">Contact</span></a>
 
         <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
