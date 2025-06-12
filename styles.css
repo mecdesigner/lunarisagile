@@ -31,33 +31,3 @@ html, body {
   width: auto;
   height: auto;
 }
-.cookie-consent {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  background: #222;
-  color: #fff;
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 9999;
-  font-size: 1rem;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
-}
-.cookie-message a {
-  color: #f7c1c6; /* accent color */
-  text-decoration: underline;
-}
-.cookie-btn {
-  background: #f7c1c6;
-  color: #222;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-}
-.cookie-btn:focus {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
