@@ -20,4 +20,14 @@ html, body {
   radial-gradient(at 0% 0%, rgba(185,193,203,0.5) 0, rgba(232,235,238,0) 100%),
   url("https://cdn.prod.website-files.com/61e750daa55a671737f07639/620444bed607d6fe9dd9d463_Noise_6percent_white.png"); /* image with noise */
   background-color: #E8EBEE;
-  }
+}
+.svg-wrapper {
+  text-align: left;      /* Align left */
+  width: 100%;           /* Full width container */
+}
+.responsive-svg {
+  display: block;
+  max-width: 100%;       /* Ensures it doesn’t overflow container */
+  width: 100%;           /* Stretches to fill available width */
+  height: auto;          /* Keeps aspect ratio */
+}
