@@ -53,8 +53,9 @@
         <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> Light Mode</div>
       </button>
       <a href="#"
-        class="hidden md:flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm"><i
-          class="ti ti-send"></i> Contact</a>
+        class="hidden md:flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm">
+        <i class="ti ti-send"></i> Contact
+      </a>
     </div>
   </header>
   <div x-data="scrollSpy(['intro','values','principles','how','design','teams','culture'])">
@@ -134,7 +135,7 @@
         <!-- Second group -->
         <div class="px-3 py-2 text-neutral-100 dark:text-neutral-100 text-sm font-semibold">Hybrid Flow Variant - Reset Week</div>
       </nav>
-      <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS</div>
+      <div class="mt-auto mb-6 text-xs text-neutral-100 dark:text-neutral-50">©2025 Lunaris TailwindCSS | All rights reserved.</div>
     </aside>
 
     <!-- Sidebar mobile drawer -->
@@ -703,9 +704,14 @@
           Name still evolving. You might know it as "Orbit Agile," "Presence & Flow," or simply "The Monthly Rhythm."
           Whatever you call it, this model puts people at the center of productivity.
         </div>
-        <a href="#"
-          class="inline-block bg-primary-500 text-white font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-neutral-50 hover:text-misc-dark-background transition text-lg">Contact
-          &rarr;</a>
+        <a href="https://www.notion.so/YOUR-PAGE-ID" target="_blank" rel="noopener" 
+          class="inline-flex items-center gap-2 px-5 py-2 bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-700 transition">
+          <i class="ti ti-brand-notion text-white"></i> Suggest a Change on Notion
+        </a>
+        <a href="https://forms.gle/YOUR-GOOGLE-FORM" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-2 px-5 py-3 bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-700 transition">
+          <i class="ti ti-sign-right text-white"></i> Sign the Manifesto
+        </a>
       </div>
     </section>
 
@@ -718,14 +724,15 @@
           <li><a href="#" class="hover:text-primary-500">Contact</a></li>
           <li><a href="#" class="hover:text-primary-500">Search</a></li>
         </ul>
-        <span class="flex items-center gap-2 font-bold"><span class="text-primary-500 text-lg">🌙</span> Lunaris</span>
+        <span class="flex items-center gap-2 font-bold text-primary-500 text-lg">
+          Lunaris Agile
+        </span>
         <ul class="flex gap-4 mt-3 md:mt-0 justify-center md:justify-end">
           <li><a href="#"><span class="sr-only">Email</span> </a></li>
           <li><a href="#"><span class="sr-only">Notion</span> </a></li>
           <li><a href="#"><span class="sr-only">LinkedIn</span> </a></li>
         </ul>
       </div>
-      <div class="mt-4">© 2025 Lunaris Model. All rights reserved.</div>
     </footer>
   </main>
   <script>
