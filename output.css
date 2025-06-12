@@ -1266,19 +1266,14 @@ html, body {
 
 .svg-wrapper {
   text-align: left;
-  /* Align left */
   width: 100%;
-  /* Full width container */
 }
 
 .responsive-svg {
   display: block;
   max-width: 100%;
-  /* Ensures it doesn’t overflow container */
-  width: 100%;
-  /* Stretches to fill available width */
+  width: auto;
   height: auto;
-  /* Keeps aspect ratio */
 }
 
 .hover\:bg-neutral-50:hover {
