@@ -574,7 +574,7 @@
           ? 'opacity-100'
           : 'opacity-0'"
           class="transition-opacity duration-700 ease-out delay-1000">
-          <i class="ti ti-arrow-forward text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
+          <i class="ti ti-arrow-forward text-neutral-500 dark:text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
         </div>
         <div 
         x-data="{ visible: false }"
@@ -593,7 +593,7 @@
           ? 'opacity-100'
           : 'opacity-0'"
           class="transition-opacity duration-700 ease-out delay-1000">
-          <i class="ti ti-arrow-right-circle text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
+          <i class="ti ti-arrow-right-circle text-neutral-500 dark:text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
         </div>
         <div 
         x-data="{ visible: false }"
@@ -612,7 +612,7 @@
           ? 'opacity-100'
           : 'opacity-0'"
           class="transition-opacity duration-700 ease-out delay-1000">
-          <i class="ti ti-arrow-back-up text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
+          <i class="ti ti-arrow-back-up text-neutral-500 dark:text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
         </div>
       </div>
       <div x-data="{ visible: false }"
@@ -805,15 +805,15 @@
     </footer>
   </main>
   <!-- Cookies consent -->
-  <section id="cookieConsent" class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl z-30" role="dialog" aria-live="polite" style="display:none;">
+  <section id="cookieConsent" class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl z-30 shadow-xl" role="dialog" aria-live="polite" style="display:none;">
     <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Cookie Notice</h2>
-
     <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="#" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
-    
-    <div class="flex items-center justify-between mt-4 gap-x-4 shrink-0">
-
+    <div class="grid grid-cols-2 gap-4 mt-4 shrink-0">
         <button id="acceptCookies" class=" text-xs bg-gray-900 font-medium rounded-lg hover:bg-gray-700 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
-            Accept
+          Accept
+        </button>
+        <button id="declineCookies" class=" text-xs border text-gray-800 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+          Decline
         </button>
     </div>
   </section>
@@ -861,16 +861,23 @@
     // And also on manual toggle if you use a dark mode button
 
     // Cookies consent
-    function cookieAccepted() {
-      localStorage.setItem('cookieConsent', 'true');
+    function setCookieConsent(value) {
+      localStorage.setItem('cookieConsent', value);
       document.getElementById('cookieConsent').style.display = 'none';
+
+      // Optional: If using analytics, disable them here when declined
+      if (value === 'declined') {
+        // For example: window['ga-disable-UA-XXXXXXX-Y'] = true;
+      }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-      if (!localStorage.getItem('cookieConsent')) {
-        document.getElementById('cookieConsent').style.display = 'flex';
+      const consent = localStorage.getItem('cookieConsent');
+      if (!consent) {
+        document.getElementById('cookieConsent').style.display = 'block';
       }
-      document.getElementById('acceptCookies').onclick = cookieAccepted;
+      document.getElementById('acceptCookies').onclick = () => setCookieConsent('accepted');
+      document.getElementById('declineCookies').onclick = () => setCookieConsent('declined');
     });
   </script>
 </body>
