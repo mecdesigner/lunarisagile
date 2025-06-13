@@ -11,6 +11,7 @@
   <!-- Alpine core -->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!-- Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -567,14 +568,6 @@
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="how">
       <h2 class="text-3xl font-bold mb-8">🌒 How it Works</h2>
       <div class="md:grid md:grid-cols-1 lg:flex items-center gap-4 p-4 mb-4">
-        <div x-data="{ visible: false }"
-        x-intersect.once="visible = true"
-        :class="visible 
-          ? 'opacity-100'
-          : 'opacity-0'"
-          class="transition-opacity duration-700 ease-out delay-1000">
-          <i class="ti ti-arrow-forward text-neutral-500 dark:text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
-        </div>
         <div 
         x-data="{ visible: false }"
         x-intersect.once="visible = true"
@@ -586,13 +579,15 @@
           <p>Planning, vision alignment, retrospectives, and bonding. Everyone together, no distractions. Big-picture
             thinking, team energy, and shared purpose.</p>
         </div>
+        <div class="animate__animated animate__rotateIn">
         <div x-data="{ visible: false }"
         x-intersect.once="visible = true"
         :class="visible 
           ? 'opacity-100'
           : 'opacity-0'"
-          class="transition-opacity duration-700 ease-out delay-1000">
-          <i class="ti ti-arrow-right-circle text-neutral-500 dark:text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
+          class="transition-opacity duration-700 ease-out delay-1000 text-center">
+          <i class="ti ti-view-360-arrow text-neutral-500 dark:text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
+        </div>
         </div>
         <div 
         x-data="{ visible: false }"
@@ -604,14 +599,6 @@
           <h3 class="text-lg font-bold mb-2">Weeks 2–4 – Remote Deep Work</h3>
           <p>Execution time. Teams work autonomously toward monthly goals, with async updates and optional weekly
             check-ins.</p>
-        </div>
-        <div x-data="{ visible: false }"
-        x-intersect.once="visible = true"
-        :class="visible 
-          ? 'opacity-100'
-          : 'opacity-0'"
-          class="transition-opacity duration-700 ease-out delay-1000">
-          <i class="ti ti-arrow-back-up text-neutral-500 dark:text-neutral-50 text-3xl block pb-4" aria-hidden="true"></i>
         </div>
       </div>
       <div x-data="{ visible: false }"
