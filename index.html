@@ -254,7 +254,7 @@
             <div x-show="dark" class="items-center justify-center"><i class="ti ti-sun text-sm"></i> <span class="ml-2">Light Mode</span></div>
           </button>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScRh2KBQBqrMPSZlGK9DO8LanOtV5XU9V_S61haCaJhCC7jXA/viewform?usp=dialog"
-            class="flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm" target="_blank" rel="noopener">
+            class="flex items-center justify-center px-8 py-2 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-700 transition text-sm mb-4" target="_blank" rel="noopener">
             <i class="ti ti-writing-sign text-white"></i> <span class="ml-2">Sign the Manifesto</span>
           </a>
       </div>
@@ -566,7 +566,7 @@
     <!-- HOW IT WORKS -->
     <section class="max-w-7xl mx-auto px-4 py-12 pt-20" id="how">
       <h2 class="text-3xl font-bold mb-8">🌒 How it Works</h2>
-      <div class="flex items-center gap-4 p-4 mb-4">
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 items-center gap-4 p-4 mb-4">
         <div x-data="{ visible: false }"
         x-intersect.once="visible = true"
         :class="visible 
