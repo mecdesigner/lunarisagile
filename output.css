@@ -1257,10 +1257,6 @@ video {
   transition-duration: 150ms;
 }
 
-.delay-1000 {
-  transition-delay: 1000ms;
-}
-
 .delay-200 {
   transition-delay: 200ms;
 }
@@ -1333,6 +1329,7 @@ html, body {
 
 .infinite-rotate {
   animation: infinite-rotate 1.2s linear infinite;
+  transform-origin: center center;
 }
 
 .hover\:bg-gray-100:hover {
