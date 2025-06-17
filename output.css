@@ -1328,7 +1328,7 @@ html, body {
 }
 
 .infinite-rotate {
-  animation: infinite-rotate 1.2s linear infinite;
+  animation: infinite-rotate 2s linear infinite;
   transform-origin: center center;
 }
 
