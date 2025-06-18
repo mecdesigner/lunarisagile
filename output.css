@@ -1362,6 +1362,11 @@ html, body {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-gray-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-misc-dark-background:hover {
   --tw-text-opacity: 1;
   color: rgb(12 23 37 / var(--tw-text-opacity, 1));
@@ -1399,6 +1404,11 @@ html, body {
 .dark\:border-gray-600:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
+}
+
+.dark\:border-white:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
 .dark\:bg-gray-800:is(.dark *) {
